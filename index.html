@@ -17,14 +17,18 @@
 
 <body>
     <nav class="navbar">
-        <img src="./assets/img/6318355.webp" alt="Logo VeroMahTyping" class="navbar-logo">
+        <div class="logo-item" style="display: flex; align-items: center;">
+            <img src="./assets/img/6318355.webp" alt="Logo VeroMahTyping" class="navbar-logo">
+            <span style="font-size: 1em; font-weight: 600;"><span style="color: rgb(255, 230, 0); font-size: 1.5em;">VeroMah</span> Typing</span>
+        </div>
+        
         <ul class="navbar-list">
             <li><a href="#">Cours</a></li>
             <li><a href="#">Test</a></li>
             <li><a href="#">Apprendre</a></li>
         </ul>
         <div class="profile-dropdown">
-            <div class="profile-dropdown-btn">
+            <div class="profile-dropdown-btn" onclick="toggle()">
                 <div class="profile-img">
                     <i class="fa-solid fa-circle"></i>
                 </div>

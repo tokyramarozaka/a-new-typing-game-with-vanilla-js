@@ -1,11 +1,11 @@
 :root{
-    --primary:#eeeeee;
+    --primary:#070018;
     --secondary:#227c70;
     --green:#82cd47;
-    --secondary-light:rgba(34, 124,112, 0.2);
-    --secondary-light-2:rgba(127, 183, 126, 0.1);
-    --white:#fff;
-    --balck:#393e46;
+    --secondary-light:rgba(191, 255, 246, 0.2);
+    --secondary-light-2:rgba(250, 253, 255, 0.1);
+    --primary-2:#bbc0fd;
+    --balck:#2c2f35;
 
     --shadow:0px 2px 8px 0px var(--secondary-light);
 
@@ -30,9 +30,13 @@ body{
 .navbar{
     display: flex;
     align-items: center;
-    height: 70px;
-    background-color: var(--white);
-    padding: 0 18%;
+    justify-content: space-evenly;
+    gap: 10rem;
+    width: 100%;
+    height: 8vh;
+    background-color: var(--primary-2);
+    padding: 0;
+    position: fixed;
     
 }
 .navbar-logo{
@@ -42,20 +46,32 @@ body{
 }
 
 .navbar-list{
-    width: 100%;
+
     text-align: right;
     padding-right: 2rem;
 }
 
 .navbar-list li{
     display: inline-block;
-    margin: 0 1rem;
+    margin: 0 3rem;
+    transition: all 0.5s;
+}
+.navbar-list li:hover{
+    padding: 0.5rem 2rem;
+    background-color: var(--primary);
+    border-radius: 1rem;
+    margin: auto;
+    a{
+        color: #ffffff;
+    }
+    
 }
 
 .navbar-list li a{
     font-size: 1em;
     font-weight: 500;
     text-decoration: none;
+    color: var(--balck);
 }
 
 .profile-dropdown{
@@ -67,11 +83,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid var(--secondary);
+    border: 1px solid #ffffff;
     padding: 0.1rem 0.9rem;
     border-radius: 50px;
     cursor: pointer;
     width: 200px;
+    background-color: #eceaea;
     transition: box-shadow 0.2s, background-color 0.2s;
     span{
         margin: 0 0.5rem;
@@ -80,7 +97,7 @@ body{
     
 }
 .profile-dropdown-btn:hover{
-    background-color: var(--secondary-light-2);
+    background-color: #ffffff;
     box-shadow: var(--shadow);
 }
 .profile-img{
@@ -88,12 +105,13 @@ body{
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: url("../assets/img/IMG_20250207_112514.jpg") no-repeat center;
+    background:url("../assets/img/IMG_20250207_112514.jpg") no-repeat center;
     background-size: cover;
+    
     i{
         position: absolute;
         right: 0;
-        bottom: 0.3rem;
+        bottom: 0rem;
         font-size: 0.8rem;
         color: var(--green);
     }
@@ -101,13 +119,20 @@ body{
 }
 .profile-dropdown-list{
     position: absolute;
-    top:75px;
+    top:8.5vh;
     width: 220px;
-    right: 19%;
-    background-color: var(--white);
+    right: 8%;
+    background-color: var(--primary-2);
     border-radius: 10px;
     box-shadow: var(--shadow);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
 
+}
+
+.profile-dropdown-list.active{
+    max-height: 500px;
 }
 hr{
     border: 1px solid var(--green);
@@ -128,8 +153,7 @@ hr{
             width: 2.3rem;
             height: 2.3rem;
             border-radius: 50%;
-            background-color: var(--secondary-light);
-            color: var(--white);
+            background-color: #eceaea;            color: var(--white);
             line-height: 2.3rem;
             text-align: center;
             
