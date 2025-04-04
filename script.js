@@ -1,10 +1,3 @@
-/**
- * Point culture (en Français car je suis un peu obligé): 
- * Dans ce genre de jeu, un mot equivaut a 5 caractères, y compris les espaces. 
- * La precision, c'est le pourcentage de caractères tapées correctement sur toutes les caractères tapées.
- * 
- * Sur ce... Amusez-vous bien ! 
- */
 let startTime = null, previousEndTime = null;
 let currentWordIndex = 0;
 const wordsToType = [];
@@ -20,19 +13,22 @@ const words = {
     hard: ["synchronize", "complicated", "development", "extravagant", "misconception"]
 };
 
-// Generate a random word from the selected mode
+// Choisir un mot aléatoire selon la difficulté
 const getRandomWord = (mode) => {
     const wordList = words[mode];
     return wordList[Math.floor(Math.random() * wordList.length)];
 };
 
-// Initialize the typing test
+// Initialisation du test
 const startTest = (wordCount = 50) => {
-    wordsToType.length = 0; // Clear previous words
-    wordDisplay.innerHTML = ""; // Clear display
+    wordsToType.length = 0;
+    wordDisplay.innerHTML = "";
     currentWordIndex = 0;
     startTime = null;
     previousEndTime = null;
+    inputField.disabled = false;
+    inputField.value = "";
+    results.textContent = "";
 
     for (let i = 0; i < wordCount; i++) {
         wordsToType.push(getRandomWord(modeSelect.value));
@@ -41,66 +37,87 @@ const startTest = (wordCount = 50) => {
     wordsToType.forEach((word, index) => {
         const span = document.createElement("span");
         span.textContent = word + " ";
-        if (index === 0) span.style.color = "red"; // Highlight first word
+        span.classList.add("word"); // Pour style éventuel
+        if (index === 0) span.style.color = "red";
         wordDisplay.appendChild(span);
     });
-
-    inputField.value = "";
-    results.textContent = "";
 };
 
-// Start the timer when user begins typing
+// Démarre le timer au premier caractère
 const startTimer = () => {
     if (!startTime) startTime = Date.now();
 };
 
-// Calculate and return WPM & accuracy
+// Calcule les stats du mot actuel
 const getCurrentStats = () => {
-    const elapsedTime = (Date.now() - previousEndTime) / 1000; // Seconds
-    const wpm = (wordsToType[currentWordIndex].length / 5) / (elapsedTime / 60); // 5 chars = 1 word
-    const accuracy = (wordsToType[currentWordIndex].length / inputField.value.length) * 100;
+    const elapsedTime = previousEndTime ? (Date.now() - previousEndTime) / 1000 : 1;
+    const word = wordsToType[currentWordIndex];
+    const typed = inputField.value.trim();
 
-    return { wpm: wpm.toFixed(2), accuracy: accuracy.toFixed(2) };
+    const accuracy = typed.length > 0
+        ? (word.length / typed.length) * 100
+        : 0;
+
+    const wpm = (word.length / 5) / (elapsedTime / 60);
+
+    return {
+        wpm: wpm.toFixed(2),
+        accuracy: accuracy.toFixed(2)
+    };
 };
 
-// Move to the next word and update stats only on spacebar press
-const updateWord = (event) => {
-    if (event.key === " ") { // Check if spacebar is pressed
-        if (inputField.value.trim() === wordsToType[currentWordIndex]) {
-            if (!previousEndTime) previousEndTime = startTime;
-
-            const { wpm, accuracy } = getCurrentStats();
-            results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
-
-            currentWordIndex++;
-            previousEndTime = Date.now();
-            highlightNextWord();
-
-            inputField.value = ""; // Clear input field after space
-            event.preventDefault(); // Prevent adding extra spaces
-        }
-    }
-};
-
-// Highlight the current word in red
+// Highlight mot suivant et reset le précédent
 const highlightNextWord = () => {
     const wordElements = wordDisplay.children;
-
     if (currentWordIndex < wordElements.length) {
-        if (currentWordIndex > 0) {
-            wordElements[currentWordIndex - 1].style.color = "black";
+        for (let i = 0; i < wordElements.length; i++) {
+            wordElements[i].style.color = "black";
         }
         wordElements[currentWordIndex].style.color = "red";
     }
 };
 
-// Event listeners
-// Attach `updateWord` to `keydown` instead of `input`
+// Quand l'utilisateur appuie sur Espace
+const updateWord = (event) => {
+    if (event.key === " ") {
+        event.preventDefault();
+
+        const typed = inputField.value.trim();
+        const correctWord = wordsToType[currentWordIndex];
+        const wordElements = wordDisplay.children;
+
+        if (typed === correctWord) {
+            if (!previousEndTime) previousEndTime = startTime;
+
+            const { wpm, accuracy } = getCurrentStats();
+            results.textContent = `WPM: ${wpm} | Accuracy: ${accuracy}%`;
+
+            // Style mot réussi en vert
+            wordElements[currentWordIndex].style.color = "green";
+        } else {
+            // Faux : rouge
+            wordElements[currentWordIndex].style.color = "crimson";
+        }
+
+        currentWordIndex++;
+        previousEndTime = Date.now();
+        inputField.value = "";
+
+        if (currentWordIndex >= wordsToType.length) {
+            inputField.disabled = true;
+            results.textContent += " 🎉 Test terminé !";
+        } else {
+            highlightNextWord();
+        }
+    }
+};
+
+// Évènements
 inputField.addEventListener("keydown", (event) => {
     startTimer();
     updateWord(event);
 });
 modeSelect.addEventListener("change", () => startTest());
 
-// Start the test
+// Démarrer automatiquement
 startTest();
