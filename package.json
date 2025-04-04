@@ -12,5 +12,18 @@
     "speedtyping"
   ],
   "author": "HEI Madagascar : Toky & Fiantso",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valisoa01/a-new-typing-game-with-vanilla-js.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/valisoa01/a-new-typing-game-with-vanilla-js/issues"
+  },
+  "homepage": "https://github.com/valisoa01/a-new-typing-game-with-vanilla-js#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.1",
+    "tailwindcss": "^4.1.1"
+  }
 }
