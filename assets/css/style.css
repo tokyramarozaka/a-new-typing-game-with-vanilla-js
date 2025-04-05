@@ -1,0 +1,20 @@
+:root {
+    --font: "Roboto Mono", sans-serif;
+    --text-color: white;
+    --primary-color: #6da796;
+    --secondary-color: #5c985d;
+    --tertiary-color: #001d28;
+}
+
+* {
+    font-family: var(--font);
+    color: var(--text-color);
+}
+
+body {
+    background: #001d28;
+    background: linear-gradient(223deg, #001d28 40%, #5c985d 80%, #6da796 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
