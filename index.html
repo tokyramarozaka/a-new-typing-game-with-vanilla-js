@@ -7,7 +7,7 @@
     <title>Typing Test</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -16,73 +16,52 @@
 
 
 <body>
-    <nav class="navbar">
-        <div class="logo-item" style="display: flex; align-items: center;">
-            <img src="./assets/img/6318355.webp" alt="Logo VeroMahTyping" class="navbar-logo">
-            <span style="font-size: 1em; font-weight: 600;"><span style="color: rgb(255, 230, 0); font-size: 1.5em;">VeroMah</span> Typing</span>
-        </div>
-        
-        <ul class="navbar-list">
-            <li><a href="#">Cours</a></li>
-            <li><a href="#">Test</a></li>
-            <li><a href="#">Apprendre</a></li>
-        </ul>
-        <div class="profile-dropdown">
-            <div class="profile-dropdown-btn" onclick="toggle()">
-                <div class="profile-img">
-                    <i class="fa-solid fa-circle"></i>
-                </div>
-
-                <span>Veronique
-                    <i class="fa-solid fa-angle-down"></i>
-                </span>
-                <ul class="profile-dropdown-list">
-                    <li class="profile-dropdown-list-item">
-                        <a href="#">
-                            <i class="fa-regular fa-user"></i>
-                            Edit Profile
-                        </a>
-                    </li>
-                    <li class="profile-dropdown-list-item">
-                        <a href="#">
-                            <i class="fas fa-envelope"></i>
-                            Inbox
-                        </a>
-                    </li>
-                    <li class="profile-dropdown-list-item">
-                        <a href="#">
-                            <i class="fas fa-chart-line"></i>
-                            Edit Profile
-                        </a>
-                    </li>
-                    <li class="profile-dropdown-list-item">
-                        <a href="#">
-                            <i class="fas fa-sliders-h"></i>
-                            Paramettre
-                        </a>
-                    </li>
-                    <li class="profile-dropdown-list-item">
-                        <a href="#">
-                            <i class="fa-regular fa-circle-question"></i>
-                            AidE & Support
-                        </a>
-                    </li>
-                    <hr/>
-                    <li class="profile-dropdown-list-item">
-                        <a href="#">
-                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                            Se deconnecter
-                        </a>
-                    </li>
-                </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-5 py-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+      
+          <a class="navbar-brand d-flex align-items-center gap-2 mx-2" href="#">
+            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center" style="width: 3.5rem; height: 3.5rem;">
+              <img src="./assets/img/6318355.webp" alt="Logo VemTyping" style="height: 2.5rem;">
             </div>
-            
-            
+            <span class="fs-4 fw-bold">VemTyping</span>
+          </a>
+      
+
+          <div class="collapse navbar-collapse justify-content-center" id="navbarMain">
+            <ul class="navbar-nav mb-2 mb-lg-0 gap-1">
+              <li class="nav-item"><a class="nav-link fw-semibold" href="#">Cours</a></li>
+              <li class="nav-item"><a class="nav-link fw-semibold" href="#">Test</a></li>
+              <li class="nav-item"><a class="nav-link fw-semibold" href="#">Apprendre</a></li>
+            </ul>
+          </div>
+      
+          <div class="dropdown mx-2">
+            <a class="d-flex align-items-center text-decoration-none dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="position-relative me-2">
+                <img src="https://randomuser.me/api/portraits/women/75.jpg" alt="avatar" class="rounded-circle" width="40" height="40">
+                <span class="position-absolute bottom-0 end-0.6 translate-middle p-1 bg-success border border-white rounded-circle"></span>
+              </div>
+              <span class="fw-semibold text-primary">Veronique</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end mt-5 p-2 shadow-sm" aria-labelledby="profileDropdown">
+              <li><a class="dropdown-item py-2 " href="#"><i class="fa-regular fa-user me-2 rounded-circle"></i> Edit Profile</a></li>
+              <li><a class="dropdown-item py-2" href="#"><i class="fas fa-envelope me-2"></i> Inbox</a></li>
+              <li><a class="dropdown-item py-2" href="#"><i class="fas fa-chart-line me-2"></i> Stats</a></li>
+              <li><a class="dropdown-item py-2" href="#"><i class="fas fa-sliders-h me-2"></i> Paramètres</a></li>
+              <li><a class="dropdown-item py-2" href="#"><i class="fa-regular fa-circle-question me-2"></i> Aide & Support</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger py-2" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i> Se déconnecter</a></li>
+            </ul>
+          </div>
         </div>
-    </nav>
-    <!--
-    <header>
-        <h1>Typing Test</h1>
+      </nav>
+      
+      
+
+
+    <!--<header>
+        <h1> <img src="./assets/img/ms-lightning-dark.svg" alt="go">Typing Test</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur corporis error possimus, commodi qui facilis officia numquam facere aliquid nihil tempore dolor praesentium sit, porro inventore animi nam nobis exercitationem pariatur suscipit eos illum! Vitae minus veritatis nemo deleniti ea, autem facilis cum odio maxime deserunt temporibus neque odit earum in ducimus magni ipsum facere eos, saepe laboriosam vel? Porro ipsum incidunt tempore. Exercitationem commodi suscipit explicabo repudiandae totam et modi, perspiciatis consectetur velit. Vitae iste vero incidunt consequatur nemo.</p>
         <label for="mode">Select Mode:</label>
         <select id="mode">
             <option value="easy">Easy</option>
@@ -90,15 +69,14 @@
             <option value="hard">Hard</option>
         </select>
     </header>
-
     <main>
         <p id="word-display"></p>
         <input type="text" id="input-field" autofocus>
         <p id="results">Results : </p>
     </main>
-    <script src="script.js"></script>-->
+    <script src="script.js"></script>
 
-    <script src="./js/dropdown.js"></script>
+    <script src="./js/dropdown.js"></script>-->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
 </body>
