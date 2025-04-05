@@ -1,0 +1,46 @@
+@media (max-width: 992px) {
+    body {
+      overflow: hidden;
+      pointer-events: none;
+    }
+  }
+  
+
+.bg-primary {
+    background-color: #6366f1 !important;
+  }
+
+.dropdown-menu {
+    border-radius: 0.5rem;
+    min-width: 220px;
+    transition: all 0.2s ease;
+  }
+  
+  .dropdown-item {
+    font-size: 0.95rem;
+    border-radius: 0.25rem;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f5f9;
+  }
+
+  
+  .icon-wrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+  }
+  .border-primary{
+    border-color: #6366f1;
+  }
+
+  .px-5{
+    padding:0.5rem 5rem !important;
+  }
+
