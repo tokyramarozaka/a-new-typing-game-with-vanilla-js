@@ -57,7 +57,7 @@ header{
 }
 
 .show-off{
-    animation: animation 1.5s ease-out forwards;
+    animation: fadeOut 2s ease-out forwards;
     text-shadow: 5px 5px 20px #864d33;
 }
 
@@ -103,11 +103,16 @@ input{
     }
 }
 
-@keyframes animation{
+@keyframes fadeOut{
     0%{
-        transform: translateX(1000px);
+        opacity: 1;
+        transform: scale(0)
+    }
+    90% { 
+        opacity: 1; 
     }
     100%{
-        transform: translateX(0);
+        transform: scale(1.5);
+        opacity: 0; display: none; 
     }
 }
