@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --first-color:#e6e3dd;
+    --second-color: #542e1d;
+    --third-color: #e6e3dd57;
+}
+body{
+    color: var(--first-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    background-image: url(../photo/1bg.jpg);
+    background-size: cover;
+}
+.main_body{
+    display: flex;
+    flex-direction: row;
+    padding: 5ch;
+    gap: 10ch;
+    align-items: center;
+    width: 100vw;
+}
+.main_left{
+    background-color: var(--third-color);
+    background-image: url(../photo/loginBackgroud.png);
+    background-size: cover;
+    border-radius: 50px;
+    padding: 15ch;
+    padding-top: 10ch;
+    align-items: center;
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    gap: 2ch;
+}
+.main_name{
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+}
+.input_name{
+    background-color: var(--thidrd-color);
+    height: 4vh;
+    background: none;
+}
+.input_main{
+    background-color: var(--thidrd-color);
+    width: 22.5vw;
+    height: 4vh;
+}
+.input_name:focus{
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+}
+.input_main:focus{
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+}
+.button_create{
+    background-color: var(--first-color);
+    width: 15vw;
+    aspect-ratio: 15/2;
+}
+.button_create:hover{
+    background: none;
+}
+.button_create:active{
+    background-color: var(--second-color);
+}
+.main_rigth{
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    align-items: center;
+    height: 85vh;
+    padding-top: 3ch;
+    width: 45vw;
+}
+.logo{
+    width: 30vw;
+    aspect-ratio: 1/1;
+    border-radius: 250px;
+    opacity: 0.9;
+}
+.message{
+    display: none;
+}
+.message1{
+    display: none;
+}
+.message_allert{
+    display: flex;
+    background-color: red;
+    flex-direction: row;
+    width: 15vw;
+    gap: 2ch;
+    padding-left: 1ch;
+    align-items: center;
+    border-radius: 5px;   
+}

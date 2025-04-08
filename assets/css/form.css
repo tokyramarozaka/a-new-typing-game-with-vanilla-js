@@ -35,15 +35,18 @@ a{
 }
 .main_body_left{
     background-color: var(--third-color);
+    background-image: url(../photo/loginBackgroud.png);
+    background-size: cover;
     border-top-right-radius: 250px;
     border-bottom-right-radius: 100px;
-    font-size: x-large;
+    font-size: large;
     width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2ch;
     padding: 4ch;
+    padding-top: 10ch;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 .main_body_right{
@@ -65,12 +68,13 @@ a{
     display: flex;
     flex-direction: column;
     gap: 3ch;
+    align-items: center;
 }
 .main_input{
     background-color: var(--third-color);
     padding: 1ch;
     border-radius: 5px;
-    width: 25vw;
+    width: 20vw;
 }
 .main_input:focus{
     outline: none;
