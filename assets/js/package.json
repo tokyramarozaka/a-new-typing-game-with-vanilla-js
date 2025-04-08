@@ -12,5 +12,8 @@
     "speedtyping"
   ],
   "author": "HEI Madagascar : Toky & Fiantso",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "typing-website-template": "file:"
+  }
 }
