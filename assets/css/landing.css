@@ -1,0 +1,101 @@
+header{
+    background-color: #ddb892;
+    position: sticky;
+    top: 0;
+}
+
+.section-img-left{
+    width: 10vw;
+    animation: left 2s ease-in-out backwards alternate infinite;
+}
+
+.section-img-right{
+    width: 10vw;
+    animation: right 2s ease-in-out backwards alternate infinite;
+}
+
+.main-bg-img{
+    background-image: url(jpeg\(37\));
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.play_button{
+    animation: updown 1s ease-in-out alternate infinite;
+}
+
+.level-text{
+    animation: show 1s ease-in-out;
+}
+
+.background{
+    width: 30vw;
+    height: 15vh;
+    background-color: var(--color-amber-900);
+    border-radius: 50% 50% 0% 0%;
+    position: relative;
+    left: 6ch;
+    bottom: 5ch;
+}
+
+.bear{
+    width:30vw;
+    position: relative;
+    bottom: 27ch;
+}
+
+.show-off{
+    animation: animation 1.5s ease-out forwards;
+    text-shadow: 5px 5px 20px #864d33;
+}
+
+input{
+    background-color: #ddb892;
+}
+
+@keyframes updown{
+    from{
+        transform: translateY(15px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+        transform: translateX(25px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes left{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(30px);
+    }
+}
+
+@keyframes right{
+    0%{
+        transform: translate(-60px, 30px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes animation{
+    0%{
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}

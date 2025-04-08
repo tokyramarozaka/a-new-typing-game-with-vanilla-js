@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image" href="assets/Code & Caffeine_ Programmer Bear Crafting Kawaii Solutions Sticker.jpeg">
     <title>Typing Test</title>
 </head>
-
 <body>
-    <header>
-        <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
+    <header class="w-screen flex justify-center items-center bg-amber-800">
+        <nav class="flex w-300 justify-evenly p-3">
+            <div class="flex items-center gap-4">
+                <h1 class="text-3xl text-white font-bold">Typing test</h1>
+            </div>
+            <div>
+                <img class="h-18 w-18 rounded-4xl" src="assets/Code & Caffeine_ Programmer Bear Crafting Kawaii Solutions Sticker.jpeg" alt="">
+            </div>
+            <div class="flex gap-4">
+                <button class="bg-amber-900 rounded-2xl p-4 w-30 border-2 border-white text-white hover:bg-white hover:border-2 hover:scale-110 hover:duration-500 hover:text-amber-900 hover:cursor-pointer hover:font-bold" type="button">Sign in</button>
+                <button class="border-2 border-white bg-white rounded-2xl p-4 w-30 text-amber-950 hover:bg-amber-900 hover:border-2 hover:border-white hover:scale-110 hover:duration-500 hover:text-white hover:cursor-pointer hover:font-bold" type="button">About us</button>
+            </div>  
+        </nav>
     </header>
-
-    <main>
-        <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
+    <main class= "flex w-screen h-screen items-center p-50 flex-col main-bg-img">
+        <div class="animate-fade-in-scale">
+                <h2 class="font-bold text-5xl">Welcome, player!</h2>
+            <div class="text-3xl leading-20">
+                <p>Are you ready to test your typing speed ?</p>
+                <p>Click the button below to get started, and have fun!</p>
+            </div>
+        </div>
+        <div class="bg-amber-900 p-4 rounded-2xl shadow-md hover:bg-white hover:border-2 hover:border-amber-900 hover:scale-110 hover:duration-500 text-white text-3xl hover:text-amber-900 hover:cursor-pointer hover:font-bold play_button">
+            <i class="fa-regular fa-circle-play"></i>
+            <button type="button">Play now</button>
+        </div>
     </main>
-
-    <script src="assets/js/script.js"></script>
 </body>
-
 </html>
