@@ -15,13 +15,25 @@ header{
 }
 
 .main-bg-img{
-    background-image: url(jpeg\(37\));
+    background-image: url(/assets/photo/bg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 5ch;
 }
 
 .play_button{
     animation: updown 1s ease-in-out alternate infinite;
+    padding: 2ch;
+    font-size: 60px;
+}
+
+.welcome-message{
+    text-indent: 12ch;
+    display: flex;
+    flex-direction: column;
+    gap: 5ch;
 }
 
 .level-text{
