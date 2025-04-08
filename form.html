@@ -11,10 +11,11 @@
 </head>
 <body>
     <main class="main_body">
-        <h1>
-            Login :
-        </h1>
-        <div class="main_form">
+        <div class="main_body_left">
+            <h1>
+                Login :
+            </h1>
+            <div class="main_form">
                 <div>
                     <p>Username</p>
                     <input class="main_input mail" type="email" placeholder="Username or email" >
@@ -23,27 +24,34 @@
                     <p>Password</p>
                     <input class="main_input password" type="password" placeholder="Password"><i class="fa-thin fa-lock"></i>
                 </div>
+            </div>
+            <button class="login_button ">
+                Login
+            </button>
+            <div class="form_footer">
+                <b>Continue with :</b>
+                <button class="network"><i class="fa-brands fa-google"></i> : Google</button>
+                <button class="network"><i class="fa-brands fa-facebook"></i> : Facebook</button>
+                <button class="network"><i class="fa-brands fa-instagram"></i> : Instagram</button>
+                <button class="network"><i class="fa-brands fa-x-twitter"></i> : Twitter</button>
+            </div>
+            <b class="message1">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Username or password incorrect
+            </b>
+            <b class="message">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Please fill out your name or your password
+            </b>
+            <a href="">Create account</a>
         </div>
-        <button class="login_button ">
-            Login
-        </button>
-        <hr style="border-color: black;">
-        <div class="form_footer">
-            <b>Continue with :</b>
-            <button class="network"><i class="fa-brands fa-google"></i> : Google</button>
-            <button class="network"><i class="fa-brands fa-facebook"></i> : Facebook</button>
-            <button class="network"><i class="fa-brands fa-discord"></i> : Discord</button>
-            <button class="network"><i class="fa-brands fa-linkedin-in"></i> : Linkedinn</button>
+        <div class="main_body_right">
+            <p>Lets's play together and have fun</p>
+            <b>Together we will go far</b>
+            <b>we created this for you</b>
+            <img class="logo" src="assets/photo/logo.png" alt="">
+            <p><a href="">Contact us</a></p>
         </div>
-        <b class="message">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            Please fill out your name or your password
-        </b>
-        <b class="message1">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            Username or password incorrect
-        </b>
-        <a href="">Create account</a>
     </main>
 </body>
 <script src="assets/js/form.js"></script>
