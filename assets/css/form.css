@@ -17,20 +17,49 @@ body{
     height: 100vh;
     width: 100vw;
     align-items: center;
-    background-image: url(../photo/20197293307.jpg);
+    background-image: url(../photo/1bg.jpg);
     background-size: cover;
 }
 .main_body{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    gap: 3ch;
+    background-image: url(../photo/1bg.jpg);
+
+}
+a{
+    color: var(--first-color);
+    text-decoration: underline
+}
+.main_body_left{
     background-color: var(--third-color);
-    margin-top: 20ch;
-    width: 40vw;
+    border-top-right-radius: 250px;
+    border-bottom-right-radius: 100px;
+    font-size: x-large;
+    width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2ch;
-    border-radius: 15px;
     padding: 4ch;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+.main_body_right{
+    font-size: x-large;
+    padding: 5ch;
+    display: flex;
+    flex-direction: column;
+    gap:2ch;
+    width: 50vw;
+    align-items: center;
+}
+.logo{
+    width: 30vw;
+    aspect-ratio: 1/1;
+    border-radius: 250px;
+    opacity: 0.9;
 }
 .main_form{
     display: flex;
@@ -41,14 +70,16 @@ body{
     background-color: var(--third-color);
     padding: 1ch;
     border-radius: 5px;
+    width: 25vw;
 }
-.main_input:placeholder{
+.main_input:focus{
+    outline: none;
     border: none;
     background-color: var(--first-color);
 }
 .login_button{
     background-color: var(--first-color);
-    width: 5vw;
+    width: 15vw;
     height: 4vh;
     border-radius: 5px;
 }
@@ -57,8 +88,9 @@ body{
     transition: 500ms;
 }
 .login_button:active{
-    background: none;
+    background-color: var(--second-color);
     transition: 500ms;
+    transform: scale(0.9);
 }
 .message{
     display: none;
