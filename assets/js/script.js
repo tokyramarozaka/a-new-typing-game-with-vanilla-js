@@ -57,14 +57,14 @@ const startTimer = () => {
 // Calculate and return WPM & accuracy
 const test = () => {
     let prec = 0
-    const color = document.createElement("color")
+    //const color = document.createElement("color")
     for(let i = 0; i < wordsToType[currentWordIndex].length; i++){
         if (inputField.value[i] == wordsToType[currentWordIndex][i]) {
             prec += (100/wordsToType[currentWordIndex].length)
         }
-        if (inputField.value[i] != wordsToType[currentWordIndex][i]) {
+        /*if (inputField.value[i] != wordsToType[currentWordIndex][i]) {
             wordsToType[currentWordIndex][i].color.style.color = "red"
-        }
+        }*/
     }
     return prec
 }
