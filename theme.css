@@ -1,0 +1,32 @@
+body{
+    font-family: 'Poppins', 'Quicksand', sans-serif;
+}
+:root{
+    --black: #2e2e2e;
+    --red:   #ff6b6b;
+    --grey:  #d3d3d3; 
+    --white: #fffafc;
+    --hover_black:#d3d3d3;
+    --hover_red:#e63946;
+    --hover_grey:#2e2e2e;
+    --hover_white:#ffb6c1;
+}
+.red_bgc{
+    background-color: var(--red);
+}
+.black_bgc{
+    background-color: var(--black);
+}
+.white_text{
+    color: var(--white);
+}
+.white_bgc{
+    background-color: var(--white);
+}
+.grey_bgc{
+    background-color: var(--grey);
+}
+:hover.navbar_text{
+    color: #f48c8c
+
+}
