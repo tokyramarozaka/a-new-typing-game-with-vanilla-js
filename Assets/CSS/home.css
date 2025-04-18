@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Quicksand';
+    --primary-color: palevioletred;
+}
+
+nav ul li {
+    margin-left: 1%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    font-size: x-large;
+    margin-top: 1ch;
+}
+
+nav img {
+    width: 3vw;
+    height: 5vh;
+    border-radius: 25%;
+}
+
+body {
+    background-image: url(../Photo/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body h1 {
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 15%;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+.body a button {
+    margin-top: 13%;
+    margin-left: 45%;
+    width: 9vw;
+    height: 7vh;
+    font-size: larger;
+    background-color: palevioletred;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px;
+
+ 
+    animation: fadeInButton 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.body a button:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
