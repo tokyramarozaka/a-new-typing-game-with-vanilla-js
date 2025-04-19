@@ -1,0 +1,132 @@
+:root {
+    --primary: #10b981;
+    --secondary: #3b82f6;
+    --error: #ef4444;
+    --dark: #0f172a;
+    --darker: #020617;
+    --light: #898a8a;
+    --highlight: #f59e0b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+   
+    background: linear-gradient(to right, rgb(31, 32, 31), rgb(11, 1, 72));
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: colorChange 3s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { color: #fff; }
+    50% { color: #ffcc00; }
+    100% { color: #00ffff; }
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    margin-left: 7vw;
+    animation: identifier 2s infinite alternate;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border: 2px solid #fff;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+@keyframes identifier {
+    0% { transform: rotate3d(0, 1, 0, 0deg); }
+    25% { transform: rotate3d(0, 1, 0, 90deg); }
+    50% { transform: rotate3d(0, 1, 0, 360deg); }
+    100% { transform: rotate3d(0, 1, 0, 0deg); }
+
+}
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+}
+
+.input-group i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+button:hover {
+    background-color: #ff8533;
+    transform: translateY(-2px);
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+

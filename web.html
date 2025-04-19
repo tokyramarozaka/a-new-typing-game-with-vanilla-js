@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeMaster - Jeu de dactylographie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="logo.css">
+    
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">Future Game</div>
+    </nav>
+    
+    
+    <div class="main-container">
+       
+        <div class="stats-panel">
+            <div class="stat-box">
+                <div class="stat-value" id="wpm">0</div>
+                <div>Mots/min</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="accuracy">0%</div>
+                <div>Précision</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="time">0s</div>
+                <div>Temps</div>
+            </div>
+        </div>
+        
+       
+        <div class="text-display" id="text-display">
+         
+        </div>
+        
+        
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Commencez à taper..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+        </div>
+        
+        
+        <div class="controls">
+            <button class="btn btn-primary" id="new-test">Nouveau test</button>
+        </div>
+        
+       
+        <div class="difficulty">
+            <div class="difficulty-btn active" data-difficulty="easy">Fruits</div>
+            <div class="difficulty-btn" data-difficulty="medium">Technologie</div>
+            <div class="difficulty-btn" data-difficulty="hard">Programmation</div>
+        </div>
+        <div class="button-container">
+            <a href="game.html">
+            <button>Cliquer ici</button>
+            </a>
+        </div>
+<script src="java.js"></script>
+
+</body>
+</html>

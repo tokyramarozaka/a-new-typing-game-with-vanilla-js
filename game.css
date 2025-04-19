@@ -1,0 +1,168 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:linear-gradient(to right, #000336, #141414);
+    margin: 170px;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background:linear-gradient(to right, #000c3c, #f0f0f0);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 25px;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#itemInput {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+#itemInput:focus {
+    border-color: #3498db;
+}
+
+#addBtn {
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#addBtn:hover {
+    background-color: #2980b9;
+}
+
+.emoji-picker {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.emoji-option {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.emoji-option:hover {
+    transform: scale(1.2);
+}
+
+#itemList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#itemList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+#itemList li:hover {
+    background-color: #e9ecef;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.actions button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.actions button:hover {
+    opacity: 0.9;
+}
+
+#shareBtn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+#clearBtn {
+    background-color: #95a5a6;
+    color: white;
+}
+.data button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    width: 170px;
+    height: 50px;
+    border: 2px solid #ddd; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 4vh;
+    margin-left: 33vw;
+    
+}
+.data button:hover {
+
+    background-color: red;
+    color: white;
+}
+.data a {
+    text-decoration: none;  
+}
