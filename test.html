@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/letter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!--begining of navbar part-->
+    <nav>
+        <!--begining of logo part-->
+        <div class="logo">
+            <!--logo picture-->
+            <img src="assets/images/logo.png" alt="Logo du site">
+            <!--logo text-->
+            <p>
+                <span style="--i:1">A</span>
+                <span style="--i:2">q</span>
+                <span style="--i:3">u</span>
+                <span style="--i:4">a</span>
+                <span style="--i:5">S</span>
+                <span style="--i:6">w</span>
+                <span style="--i:7">i</span>
+                <span style="--i:8">f</span>
+                <span style="--i:9">t</span>
+                <span style="--i:10"> </span>
+                <span style="--i:11">T</span>
+                <span style="--i:12">y</span>
+                <span style="--i:13">p</span>
+                <span style="--i:14">e</span>
+                <span style="--i:15">r</span>
+            </p>
+        </div>
+        <!--ending of logo part-->
+        <!--navigation part-->
+        <div class="nav-link">
+            <a href="index.html"><span class="nav-text">Home</span><i class="nav-icon fa-solid fa-home"></i></a>
+            <a href="index.html"><span class="nav-text">Log out</span><i
+                    class="nav-icon fa-solid fa-right-from-bracket"></i></a>
+        </div>
+        <!--changing mode-->
+        <div class="theme-mode">
+            <button onclick="changingMode()"><span class="nav-text">Dark mode</span><i
+                    class="nav-icon fa-solid fa-moon"></i></button>
+        </div>
+    </nav>
+    <!--ending of navrbar part-->
+    <header>
+        <h1>Are you fast on the keyboard?</h1>
+        <p> <em>Start your typing speed test now!</em></p>
+    </header>
+    <p id="results"></p>
+
+    <main>
+        <!--begining of select section-->
+        <section class="select">
+            <!--beginbing of left part of select-->
+            <div class="decoration">
+                <!-- Lettres en avant-plan -->
+                <div class="letter-box letter-front" id="letter1">A</div>
+                <div class="letter-box letter-front" id="letter2">D</div>
+                <div class="letter-box letter-front" id="letter3">C</div>
+                <div class="letter-box letter-front" id="letter4">G</div>
+                <div class="letter-box letter-front" id="letter5">J</div>
+                <div class="letter-box letter-front" id="letter6">H</div>
+                <div class="letter-box letter-front" id="letter7">T</div>
+                <div class="letter-box letter-front" id="letter8">Y</div>
+                <div class="letter-box letter-front" id="letter9">E</div>
+                <div class="letter-box letter-front" id="letter10">X</div>
+                <div class="letter-box letter-front" id="letter11">M</div>
+                <div class="letter-box letter-front" id="letter12">N</div>
+                <div class="letter-box letter-front" id="letter13">O</div>
+                <div class="letter-box letter-front" id="letter14">Y</div>
+                <div class="letter-box letter-front" id="letter15">E</div>
+                <div class="letter-box letter-front" id="letter16">X</div>
+                <div class="letter-box letter-front" id="letter17">Z</div>
+                <!-- Lettres en arrière-plan -->
+                <div class="letter-box letter-back" id="back1">B</div>
+                <div class="letter-box letter-back" id="back2">F</div>
+                <div class="letter-box letter-back" id="back3">G</div>
+                <div class="letter-box letter-back" id="back4">H</div>
+                <div class="letter-box letter-back" id="back5">A</div>
+                <div class="letter-box letter-back" id="back6">B</div>
+                <div class="letter-box letter-back" id="back7">C</div>
+                <div class="letter-box letter-back" id="back8">L</div>
+            </div>
+            <!--ending of left part of select-->
+            <!--beginbing of right part of select-->
+            <div class="selection">
+                <label for="mode">Select Mode</label>
+                <select id="mode">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+                <select id="selectTime">
+                    <option value="15">15s</option>
+                    <option value="30">30s</option>
+                    <option value="60">60s</option>
+                </select>
+                <button onclick="startTest()">Start typing</button>
+            </div>
+            <!--ending of right part of select-->
+        </section>
+        <!--ending of select section-->
+        <section class="test">
+            <div id="timer"></div>
+            <p id="word-display"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desing by Fy & Tsiry</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/login.js"></script>
+
+</body>
+
+</html>

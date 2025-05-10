@@ -1,0 +1,76 @@
+/*css for left part of select section*/
+.decoration {
+    padding: 5vh;
+    align-items: center;
+    position: relative !important;
+    overflow: hidden; 
+    z-index: -1;
+}
+.letter-back {
+    background-color: rgba(100, 100, 255, 0.6);
+    color: white;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.letter-box {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    color: var(--secondary-color);
+    border: var(--primary-color) 3px double;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.letter-back {
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.letter-front {
+    z-index: 2;
+}
+
+/*css for letter-front */
+#letter1 { left: 1vw; top: 2vh; }
+#letter2 { left: 33vw; top: 1vh; }
+#letter3 { left: 2vw; top: 22vh; }
+#letter4 { left: 6vw; top: 40vh; }
+#letter5 { left: 3vw; top: 32vh; }
+#letter6 { left: 30vw; top: 6vh; }
+#letter7 { left: 35vw; top: 22vh; }
+#letter8 { left: 15vw; top: 2vh; }
+#letter9 { left: 12vw; top: 32vh; }
+#letter10 { left: 19vw; top: 15vh; }
+#letter11 { left: 26vw; top: 19vh; }
+#letter12 { left: 8vw; top: 12vh; }
+#letter13 { left: 22vw; top: 5vh; }
+#letter14 { left: 20vw; top: 35vh; }
+#letter15 { left: 26vw; top: 32vh; }
+#letter16 { left: 33vw; top: 30vh; }
+#letter17 { left: 32vw; top: 40vh; }
+
+/* css for letter back */
+#back1 { left: 16vw; top: 43vh; }
+#back2 { left: 36vw; top: 16vh; }
+#back3 { left:  6vw; top: 3vh; }
+#back4 { left: 12vw; top: 21vh;  }
+#back5 { left: 19vw; top: 27vh; }
+#back6 { left: 5vw; top: 20vh; }
+#back7 { left: 26vw; top: 42vh; }
+#back8 { left: 25vw; top: 10vh;  }
+@media screen and (max-width: 769px) {
+    .decoration{
+        display: none;
+    }
+}
+
+
+
+
+

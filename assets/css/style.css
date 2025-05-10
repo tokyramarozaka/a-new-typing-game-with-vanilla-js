@@ -1,0 +1,1084 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*variable of colors*/
+:root {
+    --dark-bg: #110f0f;
+    --dark-secondary-color: rgba(0, 100, 150, 0.3);
+    --primary-color: #5F9EA0;
+    --secondary-color: #008080;
+    --terty-color: #FFD700;
+    --white: #f0f0f0;
+    --text-color1: #000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--white);
+    color: var(--text-color1);
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+/*begining of nav css*/
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-between;
+    padding: 1.5vh;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    box-shadow: 0 14px 10px rgba(0, 100, 150, 0.3);
+}
+
+/*begining of logo css*/
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3ch;
+
+    img {
+        width: 6%;
+        border-radius: 50%;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+}
+
+.logo p span {
+    position: relative;
+    display: inline-block;
+    color: var(--white);
+    text-transform: uppercase;
+    animation: colorChange 4s infinite;
+    animation-delay: calc(.5s * var(--i));
+}
+
+/*ending of logo css*/
+
+/* begining of navigation part*/
+.nav-link {
+    display: flex;
+    flex-direction: row;
+    gap: 8ch;
+}
+
+.nav-icon {
+    display: none !important;
+}
+
+.nav-link a {
+    text-decoration: none;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.nav-link a :hover {
+    color: var(--terty-color);
+}
+
+/*ending of navigation part*/
+/*begining of change mode css*/
+/*dark mode button*/
+.theme-mode button {
+    background: none;
+    text-decoration: none;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.2rem;
+    border: none;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+/*dark  mode changement*/
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--white);
+}
+
+
+/*ending of change mode css*/
+/*ending of nav css*/
+/*begining of hero css*/
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: white;
+
+    h1 {
+        color: var(--secondary-color);
+        font-size: 3rem;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0vh auto;
+        margin-bottom: 3vh;
+        letter-spacing: .15em;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+            0 0 10px var(--terty-color),
+            -1px -1px 0 rgba(255, 255, 255, 0.7);
+    }
+
+    p {
+        color: var(--primary-color);
+        font-size: 2rem;
+        animation-delay: 3.9s;
+    }
+}
+
+/*ending of hero css*/
+/*begining of home css*/
+.home {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    padding: 1vh;
+    gap: 8ch;
+}
+
+body.dark-mode .target,
+body.dark-mode .level {
+    background-color: var(--dark-secondary-color);
+    color: var(--white);
+}
+
+/*begining of left part of home*/
+.targets-container {
+    width: 30vw;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+/*carousel container*/
+.targets {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3rem 1rem;
+    margin: 1vh;
+}
+
+/*carousel items*/
+.target {
+    width: 93%;
+    height: 25vh;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    padding: 0rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    h3 {
+        color: var(--primary-color);
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+.target:first-child {
+    display: block;
+}
+
+.target i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+/*carousel prev and next button*/
+.prev,
+.next {
+    border-radius: 16px;
+    cursor: pointer;
+    top: 50%;
+    padding: 10px;
+    margin-top: -21px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    background: none;
+    border: 1px solid;
+    z-index: 2;
+}
+
+.prev {
+    margin-left: 2vh;
+    margin-right: -5vh;
+}
+
+.next {
+    margin-right: 2vh;
+    margin-left: -5vh;
+}
+
+/*round carousel indicator*/
+.carousel-indicators {
+    text-align: center;
+    bottom: 15px;
+    width: 100%;
+}
+
+.indicator {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+    background: var(--terty-color);
+}
+
+.indicator.active {
+    background: var(--primary-color);
+}
+
+/* Style for the Start button container */
+.start-button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Style for the Start button */
+.start-btn {
+    color: white;
+    border: none;
+    padding: 1.5vh 1.5vw;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    background-color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+}
+
+.start-btn:hover {
+    background-color: var(--secondary-color);
+}
+
+.start-btn i {
+    font-size: 18px;
+}
+
+/*ending of left part of home*/
+/*begining of right part of home*/
+.levels {
+
+    padding: 0;
+    width: 60vw;
+    text-align: center;
+}
+
+.levels h2 {
+    font-size: 2rem;
+    margin-bottom: 1vh;
+}
+
+.level-boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2ch;
+    flex-wrap: nowrap;
+    margin: 0;
+}
+
+.level {
+    align-items: center;
+    width: 20vw;
+    text-align: center;
+    height: 25vh;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: #929190 5px 10px 10px;
+
+}
+
+.level i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--terty-color);
+    transform: rotate(40deg);
+    margin: 1vh;
+}
+
+.easy:hover,
+.hard:hover {
+    box-shadow: 12px 20px 18px #9c9b99;
+}
+
+.level h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.level.easy {
+    border-top: 5px solid var(--secondary-color);
+}
+
+.level.medium {
+    margin-top: 15vh;
+    border-bottom: 5px solid var(--terty-color);
+    box-shadow: #929190 5px -10px 10px;
+}
+
+.level.medium:hover {
+    box-shadow: 12px -20px 18px #9c9b99;
+
+}
+
+
+.level.hard {
+    border-top: 5px solid var(--primary-color);
+}
+
+/*ending of right part of home*/
+/*ending of home css*/
+/*begining of login css*/
+.login-container {
+    width: 30vw;
+    height: 45vh;
+    margin: auto;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    text-align: center;
+
+    h2 {
+        color: var(--secondary-color);
+        margin: 1vh;
+    }
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+form button {
+    padding: 10px;
+    width: 40%;
+    height: 5vh;
+    border-radius: 15px;
+    background-color: var(--secondary-color);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--white);
+}
+
+form button:disabled {
+    background-color: var(--primary-color);
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/*loader css*/
+#loader {
+    margin-top: 10px;
+}
+
+.wave-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin: 15px auto;
+}
+
+.wave-loader>div {
+    width: 4px;
+    height: 25px;
+    margin: 0 2px;
+    background-color: var(--secondary-color);
+    animation: wave 1s infinite ease-in-out;
+}
+
+.wave-loader>div:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.wave-loader>div:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.wave-loader>div:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.wave-loader>div:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+
+.loading-hidden {
+    display: none;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+}
+
+/*ending of login css*/
+/*begining of test css*/
+/*begenining of header css*/
+header {
+    z-index: -1;
+    width: 100%;
+    height: 30vh;
+    margin: 2vh auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 0 0 20px 20px;
+
+    /*begining of h1 css*/
+    h1 {
+        color: var(--secondary-color);
+        font-size: 3rem;
+        overflow: hidden;
+        border-right: .11em solid var(--terty-color);
+        white-space: nowrap;
+        margin: 0vh auto;
+        margin-bottom: 3vh;
+        letter-spacing: .15em;
+        animation:
+            typing 3.5s steps(30, end),
+            cursor .5s step-end infinite;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3),
+            0 0 10px var(--terty-color),
+            -1px -1px 0 rgba(255, 255, 255, 0.7);
+    }
+
+    /*ending of h1 css*/
+    p {
+        color: var(--primary-color);
+        font-size: 2rem;
+        opacity: 0;
+        animation: blur 3s ease forwards;
+        animation-delay: 3.9s;
+    }
+}
+
+/*ending of header css*/
+/*the css of decoration part is in the letter.css file*/
+.decoration,
+.selection {
+    flex: 1 1 50%;
+}
+
+/*begining of select section css*/
+.select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    overflow: hidden;
+    margin: auto;
+    gap: 2rem;
+    width: 88vw;
+    height: 30vw;
+}
+
+/* selection css*/
+.selection {
+    margin: 5vh;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 5ch;
+    padding: 2rem;
+    flex-direction: column;
+    box-shadow: 4px 4px 12px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+
+    button {
+        background-color: var(--secondary-color);
+        padding: 2vh;
+        font-size: 1rem;
+        border: none;
+        border-radius: 20px;
+        color: var(--white);
+    }
+}
+
+body.dark-mode .selection {
+    background-color: var(--dark-secondary-color);
+}
+
+.selection label {
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+
+#mode,
+#selectTime {
+    font-size: 1.2rem;
+    width: 10vw;
+    height: 5vh;
+    background-color: transparent;
+    outline: none;
+    border: var(--secondary-color) solid 2px;
+    box-shadow: 4px 4px 5px 2px rgba(115, 114, 114, 0.3);
+    border-radius: 5px;
+    padding: 6px 6px;
+    text-align: center;
+}
+
+.dark-mode #mode,
+.dark-mode #selectTime {
+    background-color: var(--dark-bg);
+    color: var(--white);
+}
+
+option {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/*ending of select css*/
+/*css for the tapying part*/
+.test {
+    margin-block: 5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#word-display {
+    letter-spacing: 0.3rem;
+    word-spacing: 1ch;
+    background-color: transparent;
+    width: 70vw;
+    border: #FFD700 8px solid;
+    margin: auto;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2vh 4vh;
+}
+
+.cursor {
+    border-left: solid 2px var(--secondary-color);
+}
+
+/*css of footer*/
+footer {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+footer p {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/*ending of footer css*/
+
+/* These classes are used by your JavaScript */
+.loading-hidden {
+    display: none;
+}
+
+.loading {
+    display: block;
+}
+
+/*media query for medium screen*/
+@media screen and (min-width: 769px) and (max-width: 1500px) {
+
+    /*reduce font-size for medium scree*/
+    .logo p {
+        font-size: 1.5rem;
+    }
+
+    .nav-link a,
+    .theme-mode button {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    .nav-link {
+        gap: 5ch;
+        margin-right: 5ch;
+    }
+
+    .theme-mode button {
+        padding: 0 1.5vh;
+        width: auto;
+        margin: 0;
+    }
+
+    /*hero css for medium screen*/
+    .hero {
+        height: 20vh;
+        margin: 0vh;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+        }
+    }
+
+    /*home css for medium*/
+    .home {
+        flex-direction: column;
+    }
+
+    .targets-container {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .target {
+        h3 {
+            color: var(--primary-color);
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    .prev,
+    .next {
+        font-size: 2rem;
+        margin-top: 1vh;
+    }
+
+    .levels {
+        width: 100%;
+    }
+
+    .level-boxes {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .level {
+        width: 40vw;
+        height: 17vh;
+    }
+
+    .level.medium {
+        margin-top: 0;
+        box-shadow: #929190 5px 10px 10px;
+
+    }
+
+    /*login css*/
+    .login-container {
+        width: 50vw;
+        height: 25vh;
+    }
+
+    /*test page css/*
+      /*change the header css for medium screen*/
+
+    header {
+        height: 20vh;
+        margin: 0vh;
+
+        h1 {
+            font-size: 2.5rem;
+            animation:
+                typing 3.2s steps(35, end),
+                cursor .5s step-end infinite;
+        }
+
+        p {
+            font-size: 1.3rem;
+            animation-delay: 3.2s;
+        }
+    }
+
+
+
+    /*change the h1 animation for medium screeen*/
+    @keyframes typing {
+        from {
+            width: 0
+        }
+
+        to {
+            width: 90%
+        }
+    }
+
+    /*select css for medium screen*/
+    .select {
+        height: 40vw;
+    }
+
+    .selection {
+        margin: 3vh;
+        gap: 2vw;
+        width: 34vw;
+        height: 28vw;
+
+        button {
+            padding: 2% 4%;
+            border-radius: 15px;
+        }
+    }
+
+    #mode,
+    #selectTime
+    {
+    width: 40%;
+    padding: 2%;
+}
+
+#mode option, #selectTime option {
+    font-size: 0.5rem;
+    padding: 2px 8px;
+}
+
+/*footer css for medium screen*/
+footer {
+    padding: 1.5rem 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+}
+
+
+/* Media query for small screen */
+@media screen and (max-width: 768px) {
+
+    /*mask the text on small screen*/
+    .nav-text {
+        display: none;
+    }
+
+    .logo p {
+        display: none;
+    }
+
+    /* Show icons on small screens */
+    .nav-icon {
+        display: inline-block !important;
+        margin-right: 5vh;
+        font-size: 1.5rem;
+    }
+
+    .logo img {
+        width: 20%;
+    }
+
+    .nav-link {
+        gap: 0vh;
+    }
+
+    .theme-mode button {
+        margin-right: -2vh;
+    }
+
+    /*hero css for small screen*/
+    .hero {
+        height: 20vh;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 1.2rem;
+            letter-spacing: .12em;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    /*home css for small screen*/
+    .home {
+        flex-direction: column;
+    }
+
+    .targets-container {
+        width: 100vw;
+        margin: 0;
+    }
+
+    .target {
+        margin: 0;
+        width: 100%;
+        padding: 2rem 2rem;
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .prev,
+    .next {
+        border: none;
+        margin-top: 1vh;
+    }
+
+    .levels {
+        width: 100%;
+    }
+
+    .level-boxes {
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+
+    }
+
+    .level {
+        width: 80vw;
+        height: 25vh;
+    }
+
+    .level.medium {
+        margin-top: 0;
+        box-shadow: #929190 5px 10px 10px;
+
+    }
+
+    /*login css*/
+    .login-container {
+        width: 90vw;
+        height: 40vh;
+    }
+
+    .input-group i {
+        margin-right: 10px;
+        color: var(--secondary-color);
+        font-size: 1.2rem;
+    }
+
+    /*test page css/*
+     /*change the header css for small screen*/
+    header {
+        height: 20vh;
+        margin: 0 auto;
+
+        h1 {
+            font-size: 1.2rem;
+            letter-spacing: .12em;
+            animation:
+                typing 3s steps(46, end),
+                cursor .5s step-end infinite;
+        }
+
+        p {
+            font-size: 1rem;
+            animation-delay: 3s;
+        }
+    }
+
+
+    /*change the h1 animation for small screen*/
+    @keyframes typing {
+        from {
+            width: 0
+        }
+
+        to {
+            width: 80%
+        }
+    }
+
+    /*select css for small scree*/
+    .select {
+        height: 70vw;
+    }
+
+    .selection {
+        margin: 3vh;
+        gap: 2vw;
+        width: 34vw;
+        height: 50vw;
+
+        button {
+            padding: 2% 4%;
+            border-radius: 15px;
+        }
+    }
+
+    #mode, #selectTime {
+        width: 50%;
+        padding: 2%;
+    }
+
+    #mode option, #selectTime option {
+        font-size: 0.6rem;
+        padding: 10px 5px;
+    }
+
+    /*footer css for small screen*/
+    footer {
+        padding: 1rem 0;
+        margin-top: 2rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/*animation*/
+/*animaton for the logo p*/
+@keyframes colorChange {
+    0% {
+        color: var(--white);
+    }
+
+    20% {
+        color: var(--primary-color);
+    }
+
+    40% {
+        color: var(--terty-color);
+    }
+
+    60% {
+        color: #ff6b6b;
+    }
+
+    80% {
+        color: var(--secondary-color);
+    }
+
+    100% {
+        color: var(--white);
+    }
+}
+
+/*animation of test page*/
+/*begining of h1 animation*/
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 50%
+    }
+}
+
+/*the cursor animation*/
+@keyframes cursor {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--terty-color)
+    }
+}
+
+/*ending of h1 animation*/
+/*begining of p animation*/
+@keyframes blur {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/*ending of p animation*/
+/*loader animation */
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: scaleY(0.4);
+    }
+
+    50% {
+        transform: scaleY(1);
+    }
+}

@@ -4,27 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Test</title>
+    <title>AquaSwift Typer</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-    </header>
 
-    <main>
-        <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Logo">
+            <p>
+                <span style="--i:1">A</span>
+                <span style="--i:2">q</span>
+                <span style="--i:3">u</span>
+                <span style="--i:4">a</span>
+                <span style="--i:5">S</span>
+                <span style="--i:6">w</span>
+                <span style="--i:7">i</span>
+                <span style="--i:8">f</span>
+                <span style="--i:9">t</span>
+                <span style="--i:10"> </span>
+                <span style="--i:11">T</span>
+                <span style="--i:12">y</span>
+                <span style="--i:13">p</span>
+                <span style="--i:14">e</span>
+                <span style="--i:15">r</span>
+            </p>
+        </div>
+
+        <div class="nav-link">
+            <a href="index.html"><span class="nav-text">Home</span><i class="nav-icon fa-solid fa-house"></i></a>
+            <a href="login.html"><span class="nav-text">Login</span><i class="nav-icon fa-solid fa-right-to-bracket"></i></a>
+        </div>
+
+        <!--changing mode-->
+        <div class="theme-mode">
+            <button onclick="changingMode()"><span class="nav-text">Dark mode</span><i
+                    class="nav-icon fa-solid fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to AquaSwift Typer!</h1>
+        <p>Boost your typing speed and accuracy in a fun and interactive way.</p>
+    </section>
+    <main class="home">
+        <!-- targets Section -->
+        <section class="targets-container">
+            <div class="targets">
+                <button class="prev" onclick="plusTarget(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="target">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <h3>Speed Tracking</h3>
+                    <p>Measure your typing speed and track your progress over time.</p>
+                </div>
+                <div class="target">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>Typing Practice</h3>
+                    <p>Choose from multiple levels: Easy, Medium, or Hard.</p>
+                </div>
+                <div class="target">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Progress Analytics</h3>
+                    <p>See how you improve with each test and session.</p>
+                </div>
+                <button class="next" onclick="plusTarget(1)"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <!-- Indicateurs de position dans le carrousel -->
+            <div class="carousel-indicators">
+                <span class="indicator" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+            </div>
+                    <!-- Start button  -->
+            <div class="start-button-container">
+                <button id="start-button" class="start-btn">
+                    <i class="fa-solid fa-play"></i> Start
+                </button>
+            </div>
+        </section>
+        <section class="levels">
+            <h2>Typing Levels</h2>
+            <div class="level-boxes">
+                <div class="level easy">
+                    <h3>Easy</h3>
+                    <p>Basic words for beginners. Perfect if you're just getting started or want a warm-up.</p>
+                    <i class="fa-solid fa-keyboard"></i>
+                </div>
+                <div class="level medium">
+                    <i class="fa-solid fa-keyboard"></i>
+                    <h3>Medium</h3>
+                    <p>Intermediate words with a mix of length and complexity to challenge your speed and accuracy.</p>
+                </div>
+                <div class="level hard">
+                    <h3>Hard</h3>
+                    <p>Advanced vocabulary and tricky words. Test your ultimate typing skills!</p>
+                    <i class="fa-solid fa-keyboard"></i>
+                </div>
+            </div>
+        </section>
+        
     </main>
+    <!-- Footer -->
+    <footer>
+        <p>Design by Fy & Tsiry © 2025</p>
+    </footer>
 
-    <script src="script.js"></script>
+    <script src="assets/js/home.js"></script>
 </body>
 
 </html>

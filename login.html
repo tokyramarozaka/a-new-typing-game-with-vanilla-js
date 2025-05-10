@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <!--begining of logo part-->
+        <div class="logo">
+            <!--logo picture-->
+            <img src="assets/images/logo.png" alt="Logo du site">
+            <!--logo text-->
+            <p>
+                <span style="--i:1">A</span>
+                <span style="--i:2">q</span>
+                <span style="--i:3">u</span>
+                <span style="--i:4">a</span>
+                <span style="--i:5">S</span>
+                <span style="--i:6">w</span>
+                <span style="--i:7">i</span>
+                <span style="--i:8">f</span>
+                <span style="--i:9">t</span>
+                <span style="--i:10"> </span>
+                <span style="--i:11">T</span>
+                <span style="--i:12">y</span>
+                <span style="--i:13">p</span>
+                <span style="--i:14">e</span>
+                <span style="--i:15">r</span>
+            </p>
+        </div>
+        <!--ending of logo part-->
+        <!--navigation part-->
+        <div class="nav-link">
+            <a href="index.html"><span class="nav-text">Home</span><i class="nav-icon fa-solid fa-home"></i></a>
+            <a href="login.html"><span class="nav-text">Login</span><i class="nav-icon fa-solid fa-right-to-bracket"></i></a>
+        </div>
+        <!--changing mode-->
+        <div class="theme-mode">
+            <button onclick="changingMode()"><span class="nav-text">Dark mode</span><i
+                    class="nav-icon fa-solid fa-moon"></i></button>
+        </div>
+    </nav>
+    <main>
+        <div class="login-container">
+            <h2>Login to AquaSwift Typer</h2>
+            <form id="login-form">
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div id="loader" class="loading-hidden">
+                <div class="wave-loader">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+            <p class="error-message"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Desing by Fy & Tsiry</p>
+    </footer>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>
