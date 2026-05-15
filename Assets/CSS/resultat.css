@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'underdog', Arial, sans-serif;
+    
+}
+
+body {
+    color: white;
+    background: linear-gradient(to bottom, #0D0D0D, #a09f9f);
+    ;
+
+
+}
+
+.CONTAINER {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.conatiner_gauche {
+    margin-top: 25px;
+    width: 60%;
+
+
+}
+
+.container_droit {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    animation-name: bouge;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+
+
+.titre {
+    margin-left: 48px;
+    margin-bottom: 20px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.DUREE {
+
+    border: 1px solid grey;
+    border-radius: 3px;
+    width: 300px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    padding-left: 15px;
+    background: linear-gradient(to bottom, #0D0D0D, #a09f9f);
+
+
+
+}
+
+.deatil_de_resultat {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.terminé {
+    display: flex;
+    flex-direction: row;
+    margin-left: 35px;
+    gap: 10px;
+}
+
+.icons {
+    width: 20px;
+    height: 20px;
+}
+
+.icons img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.analyse {
+    margin-top: 10px;
+    margin-left: 20px;
+
+}
+
+.btn1 {
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 150px;
+    height: 30px;
+    background-color: greenyellow;
+    border-radius: 9px;
+}
+
+.button {
+    margin-top: 2%;
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(to bottom, #0D0D0D, #a09f9f);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+/* animation */
+@keyframes bouge {
+    0% {
+        padding-top: 30vh;
+    }
+
+    50% {
+        padding-top: 20vh;
+    }
+
+    100% {
+        padding-top: 30vh;
+    }
+}

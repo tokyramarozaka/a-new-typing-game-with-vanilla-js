@@ -8,11 +8,14 @@
 let startTime = null, previousEndTime = null;
 let currentWordIndex = 0;
 const wordsToType = [];
+const typedHistory = [];
+let timerInterval;
 
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
+const precis = document.getElementById("precis");
 
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
@@ -27,13 +30,17 @@ const getRandomWord = (mode) => {
 };
 
 // Initialize the typing test
-const startTest = (wordCount = 50) => {
+const startTest = (wordCount = 30) => {
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display
+    typedHistory.length = 0;
     currentWordIndex = 0;
     startTime = null;
     previousEndTime = null;
 
+    clearInterval(timerInterval);
+    document.getElementById("timer").textContent = "⏱ Temps : 0s";
+    results.textContent = "";
     for (let i = 0; i < wordCount; i++) {
         wordsToType.push(getRandomWord(modeSelect.value));
     }
@@ -46,38 +53,67 @@ const startTest = (wordCount = 50) => {
     });
 
     inputField.value = "";
-    results.textContent = "";
+
+
 };
 
 // Start the timer when user begins typing
 const startTimer = () => {
-    if (!startTime) startTime = Date.now();
+    if (!startTime) {
+        startTime = Date.now();
+        timerInterval = setInterval(() => {
+            const elapsed = Math.floor((Date.now() - startTime) / 1000);
+            const minutes = Math.floor(elapsed / 60);
+            const seconds = elapsed % 60;
+            const formattedTime = minutes > 0
+                ? `⏱ Temps : ${minutes}m ${seconds}s`
+                : `⏱ Temps : ${seconds}s`;
+            document.getElementById("timer").textContent = formattedTime;
+        }, 1000);
+    }
 };
 
 // Calculate and return WPM & accuracy
 const getCurrentStats = () => {
-    const elapsedTime = (Date.now() - previousEndTime) / 1000; // Seconds
-    const wpm = (wordsToType[currentWordIndex].length / 5) / (elapsedTime / 60); // 5 chars = 1 word
-    const accuracy = (wordsToType[currentWordIndex].length / inputField.value.length) * 100;
+    const totalChars = wordsToType.join("").length;
+    let correctChars = 0;
+
+    for (let i = 0; i < wordsToType.length; i++) {
+        const expected = wordsToType[i];
+        const typed = typedHistory[i] || "";
+
+        for (let j = 0; j < Math.min(expected.length, typed.length); j++) {
+            if (expected[j] === typed[j]) {
+                correctChars++;
+            }
+        }
+    }
+
+    const totalTimeInMinutes = (Date.now() - startTime) / 1000 / 60;
+    const wpm = (totalChars / 5) / totalTimeInMinutes;
+    const accuracy = (correctChars / totalChars) * 100;
 
     return { wpm: wpm.toFixed(2), accuracy: accuracy.toFixed(2) };
 };
 
 // Move to the next word and update stats only on spacebar press
 const updateWord = (event) => {
-    if (event.key === " ") { // Check if spacebar is pressed
-        if (inputField.value.trim() === wordsToType[currentWordIndex]) {
-            if (!previousEndTime) previousEndTime = startTime;
+    if (event.key === " ") {
 
-            const { wpm, accuracy } = getCurrentStats();
-            results.textContent = `WPM: ${wpm}, Accuracy: ${accuracy}%`;
+        const typedWord = inputField.value.trim();
+        typedHistory.push(typedWord);
 
-            currentWordIndex++;
-            previousEndTime = Date.now();
-            highlightNextWord();
 
-            inputField.value = ""; // Clear input field after space
-            event.preventDefault(); // Prevent adding extra spaces
+
+        currentWordIndex++;
+        previousEndTime = Date.now();
+        highlightNextWord();
+
+        inputField.value = ""; // Clear input field after space
+        event.preventDefault(); // Prevent adding extra spaces
+
+        if (currentWordIndex === wordsToType.length) {
+            finishTest();
         }
     }
 };
@@ -93,6 +129,20 @@ const highlightNextWord = () => {
         wordElements[currentWordIndex].style.color = "red";
     }
 };
+const finishTest = () => {
+    clearInterval(timerInterval);
+    const totalTimeInSeconds = Math.floor((Date.now() - startTime) / 1000);
+    const minutes = Math.floor(totalTimeInSeconds / 60);
+    const seconds = totalTimeInSeconds % 60;
+    const formattedTime = minutes > 0
+        ? `${minutes}m ${seconds}s`
+        : `${seconds}s`;
+
+    const { wpm, accuracy } = getCurrentStats();
+
+    // Rediriger vers la page resultat.html avec les données dans l'URL
+    window.location.href = `resultat.html?temps=${formattedTime}&wpm=${wpm}&accuracy=${accuracy}`;
+};
 
 // Event listeners
 // Attach `updateWord` to `keydown` instead of `input`
@@ -104,3 +154,6 @@ modeSelect.addEventListener("change", () => startTest());
 
 // Start the test
 startTest();
+
+
+
