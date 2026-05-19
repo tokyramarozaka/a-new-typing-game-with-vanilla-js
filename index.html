@@ -5,12 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Typing Test</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="Assets/Images/favicon-ninja-32x32.png">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Underdog&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
+        </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/fontawesome.min.js" integrity="sha512-j12pXc2gXZL/JZw5Mhi6LC7lkiXL0e2h+9ZWpqhniz0DkDrO01VNlBrG3LkPBn6DgG2b8CDjzJT+lxfocsS1Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
     <header>
-        <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
+        <h1 class="head-title">Ninja Typing</h1>
+        <label class="mode" for="mode">Select Mode:</label>
         <select id="mode">
             <option value="easy">Easy</option>
             <option value="medium">Medium</option>
@@ -24,7 +34,12 @@
         <p id="results">Results : </p>
     </main>
 
-    <script src="script.js"></script>
+    <div class="exit">
+        <i class="fas fa-right-to-bracket"></i>
+        <a class="exit-text" href="acceuil.html">Exit</a>
+      </div>
+
+    <script src="Assets/Js/script.js"></script>
 </body>
 
 </html>
