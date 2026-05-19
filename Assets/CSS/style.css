@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Quicksand';
+    --primary-color: palevioletred;
+}
+
+body {
+    background-image: url(../Photo/0d7f981c8621bb9104f6d6e7c2720e8b.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1{
+    text-align: center;
+}
+
+
+#darkModeToggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    padding: 0.6rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+
+body.dark-mode {
+    background-color: #121212;
+    background-image: none;
+    color: white;
+}
+
+body.dark-mode form {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="password"] {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode input[type="submit"] {
+    background-color: #bb86fc;
+}
+
+body.dark-mode label {
+    color: #eee;
+}
+
+
+.body{
+        background-image: url(../Photo/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+}
+
+
+.login-container {
+    margin-top: 1%;
+    text-align: center;
+}
+
+
+.login-container h1 {
+    font-size: xx-large;
+    margin-bottom: 2rem;
+
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+
+form {
+    display: inline-block;
+    padding: 2rem;
+    width: 30vw;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    animation: fadeInUp 1.2s ease-out forwards;
+    opacity: 0;
+}
+
+label {
+    font-size: 1.1rem;
+    color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0 1rem 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+
+input[type="submit"] {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: larger;
+    background-color: palevioletred;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px;
+    color: white;
+    cursor: pointer;
+
+    animation: fadeInButton 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+}
