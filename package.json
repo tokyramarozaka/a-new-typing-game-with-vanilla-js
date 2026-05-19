@@ -1,7 +1,7 @@
 {
-  "name": "typing-website-template",
+  "name": "ninja-typng",
   "version": "1.0.0",
-  "description": "A barebones typing website for you to complete. ",
+  "description": "A typing test website. ",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,6 @@
     "game",
     "speedtyping"
   ],
-  "author": "HEI Madagascar : Toky & Fiantso",
+  "author": "Ny and Tiliano",
   "license": "ISC"
 }

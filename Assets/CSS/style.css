@@ -1,0 +1,161 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'underdog', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #0D0D0D, #a09f9f);
+    min-height: 100vh;
+  }
+
+#head {
+    display: flex;
+    justify-content:space-between;
+    background-color: linear-gradient(to bottom, #0D0D0D, #1F1F1F);;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.head-title {
+    color: white;
+    font-size: 40px;
+}
+
+.head-title span{
+    color: red;
+    
+}
+
+.head-button{
+    padding: 10px;
+    border-radius: 7px;
+    background-color: red;
+    opacity:0.8;
+    border: 0;
+}
+
+.head-button:hover{
+    background-color: red;
+    
+}
+
+/* Fin en-tête*/
+
+.container{
+    display: flex;
+    height: 85vh;
+}
+
+.containt-left{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.containt-left-top{
+    border-radius: 10px;
+    height: 40vh;
+    background-image: url(/Assets/Images/Keyboard.jpg);
+    background-size: cover;
+}
+
+.containt-left-bottom{
+    display: flex;
+    gap: 20px;
+}
+
+.containt-left-bottom-box1{
+    background-image: url(/Assets/Images/Multijoeur.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 35vh;
+    border-radius: 10px;
+}
+
+.containt-left-bottom-box2{
+    background-image: url(/Assets/Images/Duel.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 35vh;
+    border-radius: 10px;
+}
+
+.containt-right{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.containt-right-box{
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+
+.containt-left-top-Demo{
+    padding: 10px;
+    padding-inline: 50px;
+    border-radius: 7px;
+    background-color: red;
+    border: 0;
+}
+
+.containt-left-bottom-MultiJoueur{
+    padding: 10px;
+    padding-inline: 50px;
+    border-radius: 7px;
+    background-color: red;
+    border: 0;
+}
+
+.containt-left-bottom-Duel{
+    padding: 10px;
+    padding-inline: 50px;
+    border-radius: 7px;
+    background-color: red;
+    border: 0;
+}
+
+.containt-left-top-interior{
+    padding-top: 20vh;
+    padding-left: 10px;
+}
+
+.containt-left-bottom-box1-interior{
+    padding-top: 15vh;
+    padding-left: 10px;
+}
+
+.containt-left-bottom-box2-interior{
+    padding-top: 15vh;
+    padding-left: 10px;
+}
+
+.containt-left-top-text{
+    color: white;
+}
+
+.containt-left-bottom-box-text{
+    color: white;
+}
+
+.Containt-right-image{
+    width: 48vh;
+    padding-top: 30vh;
+    animation: bouge 5s infinite alternate;
+}
+
+@keyframes bouge {
+    0% { padding-top: 30vh;}
+    50% { padding-top: 20vh;}
+    100% { padding-top: 30vh;}
+  }
