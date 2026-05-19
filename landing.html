@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeMaster</title>
+    <link rel="stylesheet" href="assets/css/landing.css">
+    <script src="assets/js/landing.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/photo/logo.png" alt="Logo de mon site">
+            <span>TypeMaster</span>
+        </div>
+        <button class="logout-button"><a href="index.html">LOGOUT</a></button>
+    </header>
+    <main class="container">
+        <section class="hero">
+            <h1 class="hero__title">Typing test</h1>
+            <div class="hero__controls controls">
+                <div class="controls__item">
+                    <label for="mode" class="controls__label">Select mode:</label>
+                    <select id="mode" class="controls__select">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Difficult</option>
+                    </select>
+                </div>
+                <div class="controls__item">
+                    <label for="word-count" class="controls__label">Number of words:</label>
+                    <input type="number" id="word-count" value="50" min="10" class="controls__input">
+                </div>
+                <button id="start-button" class="controls__button">Start test</button>
+            </div>
+        </section>
+        <section class="typing-area">
+            <div id="word-display" class="typing-area__display">
+                </div>
+            <input type="text" id="input-field" placeholder="Start typing here" class="typing-area__input">
+        </section>
+        <section class="results-area">
+            <div id="results" class="results-area__text">
+                </div>
+        </section>
+    </main>
+</body>
+</html>
