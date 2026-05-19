@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/assets/css/output.css">
+  <link rel="stylesheet" href="/src/assets/css/style.css">
+  <link rel="stylesheet" href="/src/assets/css/header.css">
+  <link rel="stylesheet" href="/src/assets/css/lightmode.css">
+  <link rel="stylesheet" href="/src/assets/css/design.css">
+  <link rel="stylesheet" href="/src/assets/css/lightmode.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>KEYWARS</title>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+  <!-- Container -->
+  <div class="container w-[60vw] h-[90vh]  p-2 px-5 flex flex-col ">
+    <!-- header section  -->
+    <header class="flex justify-between items-center p-1 ">
+      <div class="text-4xl font-bold font-['Orbitron'] ">
+          Key<span class="logo">Wars</span> 
+      </div>
+
+      <!-- section difficulty -->
+      <div class="flex items-center space-x-4">
+          <div class="flex space-x-2 mr-4">
+              <button id="easy-btn" class="effect difficulty-btn easy-active px-4 py-1 rounded-lg font-medium active">
+                  Easy
+              </button>
+              <button id="medium-btn" class="effect difficulty-btn px-4 py-1 rounded-lg font-medium">
+                  Medium
+              </button>
+              <button id="hard-btn" class="effect difficulty-btn px-4 py-1 rounded-lg font-medium">
+                  Hard
+              </button>
+          </div>
+          
+          <!-- Dark/Light mode -->
+          <div class="flex items-center mr-2">
+              <label class="toggle-switch">
+                  <input type="checkbox" id="dark-mode-toggle">
+                  <span class="slider"></span>
+              </label>
+          </div>
+      </div>
+  </header>
+
+  <main class="flex flex-col items-center h-[95%] gap-5 p-3">
+  </main>
+  </div>
+
+  <script src="/src/components/darkLigthMode.js"></script>
+</body>
+</html>

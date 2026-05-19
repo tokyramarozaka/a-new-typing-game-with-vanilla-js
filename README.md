@@ -10,3 +10,8 @@ Since this is an HTML project, you can use your favorite CSS framework of choice
 - Added bonus if you know how to use Git well.
 
 And most important of all, have fun 🔥
+
+to run the project first 
+run the command : 
+-npm install
+-npx @tailwindcss/cli -i .\src/assets/css/input.css -o ./src/assets/css/output.css --watch

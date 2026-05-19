@@ -1,0 +1,22 @@
+body.light-mode {
+    background-color: var(--light-bg);
+    color: #333333;
+  }
+  .light-mode .effect {
+    background: linear-gradient(145deg, #e0e0e5, #ffffff);
+    box-shadow: 8px 8px 16px #d0d0d5, -8px -8px 16px #ffffff;
+  }
+  
+  .light-mode .effect:hover {
+    box-shadow: 12px 12px 24px #d0d0d5, -12px -12px 24px #ffffff;
+  }
+  
+  .light-mode .effect-inset {
+    background: linear-gradient(145deg, #e0e0e5, #ffffff);
+    box-shadow: inset 5px 5px 10px #d0d0d5, inset -5px -5px 10px #ffffff;
+  }
+  .light-mode .active-key {
+    background: linear-gradient(145deg, #d0d0d5, #f0f0f5);
+    box-shadow: inset 3px 3px 6px #c0c0c5, inset -3px -3px 6px #ffffff;
+  }
+  

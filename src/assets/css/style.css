@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+        
+:root {
+    --neon-purple: #a855f7;
+    --neon-green: #4ade80;
+    --neon-pink: #ec4899;
+    --neon-blue: #3b82f6;
+    --dark-bg: #0f0f1b;
+    --darker-bg: #0a0a12;
+    --light-bg: #f0f0f5;
+    --lighter-bg: #ffffff;
+}
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--dark-bg);
+  color: #e6e6e6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+.logo{
+  color: var(--neon-green);
+}
