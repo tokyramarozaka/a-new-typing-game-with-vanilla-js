@@ -2,29 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Test</title>
+  <link rel="stylesheet" href="output.css">
 </head>
 
-<body>
-    <header>
-        <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-    </header>
+<body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col items-center">
 
-    <main>
-        <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
-    </main>
+  <header class="w-full text-center py-8 bg-gradient-to-r from-blue-200 to-blue-400 shadow-md">
+    <h1 class="text-5xl font-bold text-blue-700">Typing Test</h1>
+    <div class="mt-4">
+      <label for="mode" class="mr-2 text-lg font-medium">Select Mode:</label>
+      <select id="mode" class="bg-white border border-blue-400 rounded px-3 py-2 text-gray-700 shadow-sm">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+  </header>
 
-    <script src="script.js"></script>
+  <main class="flex flex-col items-center justify-center flex-1 gap-6">
+    <p id="word-display" class="text-3xl font-semibold text-blue-600">Ready?</p>
+
+    <input
+      type="text"
+      id="input-field"
+      autofocus
+      class="w-2/3 max-w-md px-4 py-3 text-lg rounded-lg border-2 border-blue-400 bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 text-center shadow-sm"
+    >
+
+    <p id="results" class="text-xl text-gray-600">Results :</p>
+
+    <div class="flex gap-4 mt-6">
+      <button class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg shadow-md transition">
+        Get Started
+      </button>
+
+      <button class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-5 py-2 rounded-lg shadow-md transition">
+        Create Account
+      </button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
