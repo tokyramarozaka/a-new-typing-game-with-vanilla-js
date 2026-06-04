@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Fond violet sombre profond -->
+  <rect width="32" height="32" rx="8" fill="#1A1625"/>
+  
+  <!-- Initiale 'D' pour Dash en blanc cassé pour le contraste -->
+  <text x="5" y="23" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="19" fill="#F8FAFC">D</text>
+  
+  <!-- Le curseur 'Dash' en turquoise néon qui symbolise le mouvement -->
+  <rect x="20" y="7" width="4" height="17" rx="1" fill="#00F5D4">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+</svg>

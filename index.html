@@ -1,30 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Test</title>
+    <title>Dash</title>
+    <link rel="icon" type="image" href="assets/favIcon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
+        <div id="logo-header">
+            <!-- <i class="fa-regular fa-keyboard"></i> -->
+            <h1>Da<span id="special2">s</span>h</h1>
+        </div>
+
+        <nav id="navigation-header">
+            <div class="link-navigation-header" id="link-special">
+                <i class="fa-regular fa-keyboard"></i>
+                <a href="index.html">Test</a>
+            </div>
+
+            <div class="link-navigation-header">
+                <i class="fa-solid fa-chart-area"></i>
+                <a href="result.html">Résultats</a>
+            </div>
+
+            <div class="link-navigation-header">
+                <i class="fa-solid fa-trophy"></i>
+                <a href="leadboard.html">Leaderboard</a>
+            </div>
+
+            <div class="link-navigation-header">
+                <i class="fa-regular fa-user"></i>
+                <a href="profil.html">Profil</a>
+            </div>
+
+            <div class="link-navigation-header">
+                <i class="fa-solid fa-gear"></i>
+                <a href="setting.html">Réglages</a>
+            </div>
+        </nav>
+
+        <div id="user-header">
+            <img src="assets/user.jpg" alt="Impossible de charger l'image !">
+            <p>NovaStrike</p>
+        </div>
     </header>
 
     <main>
-        <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
+        <section class="section-option">
+            <div class="section-option-left">
+                <p>MODE : </p>
+
+                <div class="section-option-time">
+                    <label for="time">Temps</label>
+
+                    <select id="time">
+                        <option value="30">30s</option>
+                        <option value="60">60s</option>
+                        <option value="120">120s</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="section-option-right">
+                <p>DIFFICULTE : </p>
+                    <button id="level-actual">Amateur</button>
+                    <button>Intermédiaire</button>
+                    <button>Hardcore</button>
+            </div>
+        </section>
+
+        <section class="section-dactylo">
+            <p id="text-dactylo"></p>
+        </section>
+
+        <section class="section-score">
+            <div class="section-score-left">
+                <h2>00</h2>
+                <p>WPM ACTUEL</p>
+            </div>
+
+            <hr>
+
+            <div class="section-score-middle">
+                <h2>00%</h2>
+                <p>PRECISION</p>
+            </div>
+
+            <hr>
+
+            <div class="section-score-right">
+                <h2>00:00</h2>
+                <p>TEMPS RESTANT</p>
+            </div>
+        </section>
     </main>
-
-    <script src="script.js"></script>
+    
 </body>
-
+<script src="script.js"></script>
 </html>

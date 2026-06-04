@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash</title>
+    <link rel="icon" type="image" href="assets/favIcon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="result.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo-header">
+            <!-- <i class="fa-regular fa-keyboard"></i> -->
+            <h1>Da<span id="special2">s</span>h</h1>
+        </div>
+
+        <nav id="navigation-header">
+            <div class="link-navigation-header">
+                <i class="fa-regular fa-keyboard"></i>
+                <a href="index.html">Test</a>
+            </div>
+
+            <div class="link-navigation-header" id="link-special">
+                <i class="fa-solid fa-chart-area"></i>
+                <a href="result.html">Résultats</a>
+            </div>
+
+            <div class="link-navigation-header">
+                <i class="fa-solid fa-trophy"></i>
+                <a href="leadboard.html">Leaderboard</a>
+            </div>
+
+            <div class="link-navigation-header">
+                <i class="fa-regular fa-user"></i>
+                <a href="profil.html">Profil</a>
+            </div>
+
+            <div class="link-navigation-header">
+                <i class="fa-solid fa-gear"></i>
+                <a href="setting.html">Réglages</a>
+            </div>
+        </nav>
+
+        <div id="user-header">
+            <img src="assets/user.jpg" alt="Impossible de charger l'image !">
+            <p>NovaStrike</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-result-left">
+            <div class="section-result-left-top">
+                <p id="text-special1">WPM MOYEN</p>
+                <h1>00</h1>
+                <p id="text-special2">Test dernièrement fait</p>
+            </div>
+
+            <div class="section-result-left-middle">
+                <div class="section-result-left-middle1">
+                    <p>PRECISION</p>
+                    <h3>--</h3>
+                </div>
+
+                <div class="section-result-left-middle2">
+                    <p>ERREURS</p>
+                    <h3>0</h3>
+                </div>
+            </div>
+
+            <button id="section-result-left-bottom"><i class="fa-solid fa-arrow-rotate-right"></i> Recommencer ( Tab )</button>
+        </section>
+
+        <section class="section-result-right">
+            <div class="section-result-right-header">
+                <p id="section-result-right-header-left">Progression de la vitesse (mots/min)</p>
+
+                <div class="section-result-right-header-right">
+                    <div class="green-active"></div>
+                    <p>Session active</p>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="progressionChart"></canvas>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="result.js"></script>
+</html>

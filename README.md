@@ -5,7 +5,7 @@ Hi ! This is a simple typing game using HTML, CSS, and Vanilla Javascript (which
 
 ## Constraints
 Since this is an HTML project, you can use your favorite CSS framework of choice : Tailwind, Bootstrap, or any icon library. Just... don't force it to be a React or a Svelte or a Vue project. Just keep on building on top of it. 
-- Deadline : 4th of June 2026, 23h59 at most ;
+- Deadline : 19th of April 2025, 23h59 at most ;
 - How : invite me to collaborate on your repo ;
 - Added bonus if you know how to use Git well.
 

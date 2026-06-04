@@ -1,0 +1,324 @@
+@font-face {
+    font-family: 'Game Of Squids';
+    src: url('Polices/Game Of Squids.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+root {
+    --color-fond : #0F0C15;
+    --color-fonctionnalite : #9D4EDD;
+    --color-juste : #00F5D4;
+    --color-erreur : #FF007F;
+    
+    --color-vrai1: rgb(78, 230, 40);
+    --color-vrai2: rgb(251, 255, 0);
+}
+
+body {
+    background-color: #141316;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.5);
+    padding-block: 1.5ch;
+    padding-bottom: 3.5ch;
+    margin-top: 1.5ch;
+    margin-inline: 5ch;
+}
+
+#logo-header {
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-header h1 {
+    font-size: 45px;
+    font-family: 'Game Of Squids', monospace;
+    letter-spacing: 5px;    
+    color: white;
+    text-shadow: 1px 3px 4px rgba(170, 170, 170, 0.7);
+}
+
+#logo-header h1 #special1 {
+    color: white;
+}
+
+#logo-header h1 #special2 {
+    color: rgba(97, 247, 59, 1);
+}
+
+#navigation-header {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5ch;
+    border-radius: 15px;
+    padding-inline: 1ch;
+    padding-block: 1ch;
+    opacity: 0.9;
+    box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(117, 117, 117, 0.1);
+}
+
+.link-navigation-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1.7ch;
+    text-align: center;
+    padding-inline: 1.5ch;
+    justify-content: center;
+    align-items: center;
+    color: rgb(150, 150, 150);
+    transition: 0.3s ease;
+}
+
+.link-navigation-header a {
+    text-decoration: none;
+    color: rgb(150, 150, 150);
+    transition: 0.3s ease;
+}
+
+.link-navigation-header i {
+    font-size: 18px;
+}
+
+.link-navigation-header:hover {
+    color: rgb(251, 255, 0);
+}
+
+.link-navigation-header a:hover {
+    color: rgb(251, 255, 0);
+}
+
+#link-special {
+    background-color: rgba(97, 247, 59, 1);
+    border-radius: 10px;
+    padding-inline: 2ch;
+    padding-block: 1ch;
+}
+
+#link-special a {
+    color: white;
+}
+
+#link-special i {
+    margin-top: 3px;
+    color: white;
+}
+
+#user-header {
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgba(117, 117, 117, 0.1);
+    border-radius: 20px;
+    padding-inline: 2.5ch;
+    padding-block: 0.7ch;
+    cursor: pointer;
+}
+
+#user-header img {
+    width: 3vw;
+    height: 6vh;
+    border: 1px solid rgb(251, 255, 0);
+    border-radius: 50%;
+}
+
+#user-header p {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5ch;
+    /* border: 1px solid red; */
+    width: 95%;
+    margin-inline: 5ch;
+    margin-block: 3ch;
+    padding: 1.5ch;
+}
+
+.section-result-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6.5ch;
+    justify-content: space-between;
+    width: 30%;
+    padding: 3ch 5ch;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp1 0.8s ease-out forwards;
+}
+
+.section-result-left-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1ch;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding-block: 2ch;
+    background-color: rgba(70, 70, 70, 0.2);
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+#text-special1 {
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(97, 247, 59, 1);
+}
+
+#text-special2 {
+    font-weight: 450;
+    font-size: 13.5px;
+    letter-spacing: 0.6px;
+    color: yellow;
+}
+
+.section-result-left-top h1 {
+    font-size: 40px;
+    color: white;
+}
+
+.section-result-left-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-result-left-middle1, .section-result-left-middle2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5ch;
+    padding: 1ch 4ch;
+    padding-top: 1.5ch;
+    border-radius: 15px;
+    align-items: center;
+    font-size: 13.5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgba(70, 70, 70, 0.2);
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.section-result-left-middle1 h3 {
+    font-size: 30px;
+    color: yellow;
+}
+
+.section-result-left-middle2 h3 {
+    font-size: 30px;
+    color: rgb(190, 25, 25);
+}
+
+#section-result-left-bottom {
+    border: none;
+    border-radius: 7.5px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    background-color: rgba(97, 247, 59, 0.7);
+    padding-block: 1.5ch;
+    transition: 0.3s ease-in-out;
+}
+
+#section-result-left-bottom:hover {
+    background-color: rgba(96, 255, 56, 0.5);
+    box-shadow: 2px 2px 2px rgba(97, 247, 59, 0.2);
+}
+
+.section-result-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5ch 3ch;
+    width: 70%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.24);
+    opacity: 0;
+    transform: translateY(-35px);
+    animation: fadeInUp2 1s ease-out forwards;
+}
+
+.section-result-right-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#section-result-right-header-left {
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+}
+
+.section-result-right-header-right {
+    display: flex;
+    flex-direction: row;
+    gap: 1ch;
+    align-items: center;
+    color: rgba(100, 100, 100, 0.884);
+}
+
+.section-result-right-header-right .green-active {
+    margin-top: 2px;
+    width: 0.85vw;
+    height: 1.5vh;
+    border-radius: 50%;
+    background-color: rgba(97, 247, 59, 1);
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;    
+    min-height: 280px;   
+    margin-top: 2ch;     
+}
+
+@keyframes fadeInUp1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

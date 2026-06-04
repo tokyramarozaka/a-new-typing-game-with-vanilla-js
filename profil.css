@@ -1,0 +1,342 @@
+@font-face {
+    font-family: 'Game Of Squids';
+    src: url('Polices/Game Of Squids.otf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+root {
+    --color-fond : #0F0C15;
+    --color-fonctionnalite : #9D4EDD;
+    --color-juste : #00F5D4;
+    --color-erreur : #FF007F;
+    
+    --color-vrai1: rgb(78, 230, 40);
+    --color-vrai2: rgb(251, 255, 0);
+}
+
+body {
+    background-color: #141316;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.5);
+    padding-block: 1.5ch;
+    padding-bottom: 3.5ch;
+    margin-top: 1.5ch;
+    margin-inline: 5ch;
+}
+
+#logo-header {
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-header h1 {
+    font-size: 45px;
+    font-family: 'Game Of Squids', monospace;
+    letter-spacing: 5px;    
+    color: white;
+    text-shadow: 1px 3px 4px rgba(170, 170, 170, 0.7);
+}
+
+#logo-header h1 #special1 {
+    color: white;
+}
+
+#logo-header h1 #special2 {
+    color: rgba(97, 247, 59, 1);
+}
+
+#navigation-header {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5ch;
+    border-radius: 15px;
+    padding-inline: 1ch;
+    padding-block: 1ch;
+    opacity: 0.9;
+    box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(117, 117, 117, 0.1);
+}
+
+.link-navigation-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1.7ch;
+    text-align: center;
+    padding-inline: 1.5ch;
+    justify-content: center;
+    align-items: center;
+    color: rgb(150, 150, 150);
+    transition: 0.3s ease;
+}
+
+.link-navigation-header a {
+    text-decoration: none;
+    color: rgb(150, 150, 150);
+    transition: 0.3s ease;
+}
+
+.link-navigation-header i {
+    font-size: 18px;
+}
+
+.link-navigation-header:hover {
+    color: rgb(251, 255, 0);
+}
+
+.link-navigation-header a:hover {
+    color: rgb(251, 255, 0);
+}
+
+#link-special {
+    background-color: rgba(97, 247, 59, 1);
+    border-radius: 10px;
+    padding-inline: 2ch;
+    padding-block: 1ch;
+}
+
+#link-special a {
+    color: white;
+}
+
+#link-special i {
+    margin-top: 3px;
+    color: white;
+}
+
+#user-header {
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgba(117, 117, 117, 0.1);
+    border-radius: 20px;
+    padding-inline: 2.5ch;
+    padding-block: 0.7ch;
+    cursor: pointer;
+}
+
+#user-header img {
+    width: 3vw;
+    height: 6vh;
+    border: 1px solid rgb(251, 255, 0);
+    border-radius: 50%;
+}
+
+#user-header p {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+    width: 93.5%;
+    margin-inline: 5ch;
+    margin-block: 3ch;
+}
+
+.section-profil-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5.5ch;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    padding-block: 3ch;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.24);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp1 0.8s ease-out forwards;
+}
+
+.section-profil-left-top {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5ch;
+    align-items: center;
+}
+
+.section-profil-left-top .section-user-image {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.section-user-image img {
+    width: 8vw;
+    height: 15vh;
+    border-radius: 50%;
+}
+
+.section-user-image p {
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 700;
+    padding: 0ch 0.8ch;
+    padding-bottom: 0.1ch;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0;
+    right: -13px;
+}
+
+.section-profil-left-top .section-user-name {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.section-user-name h2 {
+    font-size: 27px;
+    color: white;
+}
+
+.section-user-name h3 {
+    font-size: 20px;
+    color: yellow;
+}
+
+.section-profil-left-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 2ch;
+}
+
+.section-profil-left-middle .section-level {
+    display: flex;
+    flex-direction: row;
+    gap: 20ch;
+    color: white;
+}
+
+.section-profil-left-middle .section-lateral {
+    padding-block: 0.5ch;
+    opacity: 0.2;
+    background-color: grey;
+    border-radius: 25px;
+}
+
+.section-profil-left-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 10ch;
+    padding-top: 1.5ch;
+    padding-inline: 3ch;
+    border-top: 1px solid rgb(90, 90, 90);
+}
+
+.section-profil-left-bottom .section-profil-result1, .section-profil-left-bottom .section-profil-result2 {
+    text-align: center;
+    line-height: 1.7;
+    color: rgb(90, 90, 90);
+}
+
+.section-profil-result1 p, .section-profil-result2 p {
+    font-size: 13px;
+}
+
+.section-profil-result1 h2, .section-profil-result2 h2 {
+    color: white;
+}
+
+.section-profil-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5ch;
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 15px;
+    padding: 3ch;
+    opacity: 0;
+    transform: translateY(-35px);
+    animation: fadeInUp2 1s ease-out forwards;
+}
+
+.section-profil-right-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1ch;
+    align-items: center;
+    color: white;
+}
+
+.section-profil-right-header i {
+    font-size: 22px;
+    margin-top: 5px;
+    color: rgba(97, 247, 59, 1);
+}
+
+.section-profil-right-about {
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+    width: 100%;
+}
+
+.section-skill {
+    display: flex;
+    flex-direction: column;
+    gap: 1ch;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2ch;
+    height: 54.5vh;
+    border-radius: 15px;
+    width: 33.33%;
+    color: rgb(70, 70, 70);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.185);
+}
+
+.section-skill i {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.section-skill p {
+    color: rgb(44, 44, 44);
+}
+
+@keyframes fadeInUp1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

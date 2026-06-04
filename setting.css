@@ -1,0 +1,520 @@
+@font-face {
+    font-family: 'Game Of Squids';
+    src: url('Polices/Game Of Squids.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('Polices/FiraCode-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Jet Brains';
+    src: url('Polices/JetBrainsMono-Bold.ttf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+root {
+    --color-fond : #0F0C15;
+    --color-fonctionnalite : #9D4EDD;
+    --color-juste : #00F5D4;
+    --color-erreur : #FF007F;
+    
+    --color-vrai1: rgb(78, 230, 40);
+    --color-vrai2: rgb(251, 255, 0);
+}
+
+body {
+    background-color: #141316;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(117, 117, 117, 0.5);
+    padding-block: 1.5ch;
+    padding-bottom: 3.5ch;
+    margin-top: 1.5ch;
+    margin-inline: 5ch;
+}
+
+#logo-header {
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-header h1 {
+    font-size: 45px;
+    font-family: 'Game Of Squids', monospace;
+    letter-spacing: 5px;    
+    color: white;
+    cursor: pointer;
+    text-shadow: 1px 3px 4px rgba(170, 170, 170, 0.7);
+}
+
+#logo-header h1 #special1 {
+    color: white;
+}
+
+#logo-header h1 #special2 {
+    color: rgba(97, 247, 59, 1);
+}
+
+#navigation-header {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5ch;
+    border-radius: 15px;
+    padding-inline: 1ch;
+    padding-block: 1ch;
+    opacity: 0.9;
+    box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(117, 117, 117, 0.1);
+}
+
+.link-navigation-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1.7ch;
+    text-align: center;
+    padding-inline: 1.5ch;
+    justify-content: center;
+    align-items: center;
+    color: rgb(150, 150, 150);
+    transition: 0.3s ease;
+}
+
+.link-navigation-header a {
+    text-decoration: none;
+    color: rgb(150, 150, 150);
+    transition: 0.3s ease;
+}
+
+.link-navigation-header i {
+    font-size: 18px;
+}
+
+.link-navigation-header:hover {
+    color: rgb(251, 255, 0);
+}
+
+.link-navigation-header a:hover {
+    color: rgb(251, 255, 0);
+}
+
+#link-special {
+    background-color: rgba(97, 247, 59, 1);
+    border-radius: 10px;
+    padding-inline: 2ch;
+    padding-block: 1ch;
+}
+
+#link-special a {
+    color: white;
+}
+
+#link-special i {
+    color: white;
+}
+
+#user-header {
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgba(117, 117, 117, 0.1);
+    border-radius: 20px;
+    padding-inline: 2.5ch;
+    padding-block: 0.7ch;
+    cursor: pointer;
+}
+
+#user-header img {
+    width: 3vw;
+    height: 6vh;
+    border: 1px solid rgb(251, 255, 0);
+    border-radius: 50%;
+}
+
+#user-header p {
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 3ch;
+    justify-content: space-between;
+    margin-block: 3ch;
+    margin-inline: 5ch;
+    max-width: 93.5%;
+    height: 70vh;
+}
+
+.section-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5ch;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 50%;
+    padding-inline: 3ch;
+    padding-block: 2ch;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp1 0.8s ease-out forwards;
+}
+
+.section-left1, .section-left2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2ch;
+}
+
+.section-left-title {
+    display: flex;
+    flex-direction: row;
+    gap: 1ch;
+    align-items: center;
+}
+
+.section-left-title h2 {
+    font-size: 28px;
+    color: white;
+}
+
+.section-left-title i {
+    font-size: 20px;
+    color: rgba(97, 247, 59, 1);
+}
+
+.section-left-theme1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(97, 247, 59, 1);
+    padding-inline: 1.5ch;
+    padding-block: 2ch;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(98, 143, 85, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.section-left-theme1:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 3px 5px rgba(97, 247, 59, 0.5);
+}
+
+.section-left-theme1 .active-theme-statut {
+    color: rgba(97, 247, 59, 1);
+}
+
+.section-left-theme1 .active-theme, .section-left-theme1 .active-theme .color-theme {
+    display: flex;
+    flex-direction: row;
+    gap: 1ch;
+}
+
+.section-left-theme1 .active-theme .color-theme div {
+    padding-inline: 1.3ch;
+    padding-block: 0.5ch;
+    border-radius: 50%;
+}
+
+.active-theme p {
+    color: white;
+}
+
+.color-theme .color-theme-ring1 {
+    background-color: yellow;
+}
+
+.color-theme .color-theme-ring2 {
+    background-color: rgba(97, 247, 59, 1);
+}
+
+.section-left-theme2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 1.5ch;
+    padding-block: 2ch;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(58, 58, 58, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.section-left-theme2:hover {
+    transform: translateY(-5px);
+    box-shadow: 1px 3px 5px rgba(54, 54, 54, 0.5);
+}
+
+.section-left-theme2 .not-active-theme, .not-active-theme .color-theme {
+    display: flex;
+    flex-direction: row;
+    gap: 1ch;
+}
+
+.section-left-theme2 .not-active-theme .color-theme div {
+    padding-inline: 1.3ch;
+    padding-block: 0.5ch;
+    border-radius: 50%;
+}
+
+.not-active-theme p {
+    color: white;
+}
+
+.color-theme .color-theme-ring3 {
+    background-color: #00F5D4;
+}
+
+.color-theme .color-theme-ring4 {
+    background-color: #9D4EDD;
+}
+
+.section-left2 .section-login-setting {
+    display: flex;
+    flex-direction: row;
+    gap: 2ch;
+    width: 100%;
+}
+
+.section-login-setting button {
+    border: 1px solid rgba(58, 58, 58, 0.05);
+    width: 50%;
+    font-size: 14.5px;
+    letter-spacing: 0.6px;
+    border-radius: 7.5px;
+    padding-block: 1.5ch;
+    color: white;
+    background-color: rgba(58, 58, 58, 0.2);
+    cursor: pointer;
+    transition: 0.3s ease-in-out, box-shadow 0.5s ease;
+}
+
+.section-login-setting button:hover {
+    border: 1px solid rgba(97, 247, 59, 1);
+    background-color: rgba(98, 143, 85, 0.1);
+    box-shadow: 1px 3px 5px rgba(97, 247, 59, 0.5);
+}
+
+.section-left3 a {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5ch;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 28px;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.section-left3 a:hover {
+    color: rgba(97, 247, 59, 1);
+}
+
+.section-left3 a i {
+    font-size: 22px;
+    color: rgba(97, 247, 59, 1);
+}
+
+.section-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2ch;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 50%;
+    padding-inline: 3ch;
+    padding-block: 2ch;
+    opacity: 0;
+    transform: translateY(-35px);
+    animation: fadeInUp2 1s ease-out forwards;
+}
+
+.section-right-header {
+    display: flex;
+    flex-direction: row;
+    gap: 1ch;
+    align-items: center;
+}
+
+.section-right-header h2 {
+    font-size: 28px;
+    color: white;
+}
+
+.section-right-header i {
+    font-size: 20px;
+    margin-top: 3.5px;
+    color: yellow;
+}
+
+.section-right-top {
+    display: flex;
+    flex-direction: column;
+    gap: 3ch;
+}
+
+.section-right-top1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-right-top1 p {
+    color: white;
+}
+
+.section-right-top1 #text-special {
+    color: rgb(100, 100, 100);
+}
+
+.section-switch input {
+    display: none;
+}
+
+.section-switch {
+    display: inline-block;
+    width: 3.5vw;
+    height: 3.5vh;
+    cursor: pointer;
+    position: relative;
+}
+
+.switch-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 35px;
+    transition: 0.4s;
+}
+
+.switch-button::before {
+    content: "";
+    width: 1.2vw;
+    height: 2.5vh;
+    position: absolute;
+    left: 6px;
+    bottom: 3px;
+    background-color: rgb(20, 20, 20);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.section-switch input:checked + .switch-button {
+    background-color: yellow;
+}
+
+.section-switch input:checked + .switch-button::before {
+    transform: translateX(20px);
+}
+
+.section-right-top2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.7ch;
+    width: 100%;
+}
+
+.section-right-top2 p {
+    color: white;
+}
+
+.section-right-top2 .section-button {
+    display: flex;
+    flex-direction: row;
+    gap: 1ch;
+}
+
+.section-right-top2 .section-button button {
+    border: none;
+    width: 50%;
+    font-size: 14px;
+    border-radius: 7.5px;
+    padding-block: 1.5ch;
+    font-family: 'Fira Code';
+    color: white;
+    background-color: rgba(58, 58, 58, 0.2);
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.section-button button:hover {
+    background-color: rgba(48, 48, 48, 0.2);
+    box-shadow: 1px 2px 3px rgba(10, 10, 10, 0.5);
+}
+
+.section-button #button-text-special {
+    border: 1px solid yellow;
+    box-shadow: 1px 2px 3px rgba(133, 134, 73, 0.2);
+    color: white;
+    font-family: 'Jet Brains';
+    background-color: rgba(69, 70, 44, 0.2);
+}
+
+#section-right-bottom {
+    margin-top: 20ch;
+    border: none;
+    font-size: 14px;
+    border-radius: 7.5px;
+    padding-block: 1.5ch;
+    color: white;
+    letter-spacing: 0.6px;
+    background-color: rgba(88, 88, 88, 0.2);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#section-right-bottom:hover {
+    background-color: rgba(48, 48, 48, 0.2);
+    box-shadow: 1px 2px 3px rgba(10, 10, 10, 0.5);
+}
+
+@keyframes fadeInUp1 {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
