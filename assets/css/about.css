@@ -1,0 +1,400 @@
+/* ─── BASE DE LA PAGE À PROPOS ───────────────────────── */
+.about-page main {
+    padding-top: 68px; /* Évite que le header fixe ne cache le contenu */
+    background: #07090f;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Lien actif dans le menu de navigation */
+.header-nav a.active {
+    color: var(--text-primary) !important;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ─── HERO SECTION ───────────────────────────────────── */
+.about-hero {
+    position: relative;
+    padding: 120px 40px 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.about-hero-title .brand {
+    font-family: 'Cherry Bomb One', cursive;
+    background: var(--gradient);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(212,34,204,0.3));
+}
+
+.about-hero-sub {
+    font-size: clamp(15px, 1.2vw, 18px);
+    color: var(--text-secondary);
+    font-weight: 300;
+    max-width: 540px;
+    line-height: 1.6;
+}
+
+/* ─── CTA HERO ───────────────────────────────────────── */
+.about-hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.cta-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--gradient);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: opacity 0.2s, transform 0.15s;
+}
+
+.cta-btn-primary:hover  { opacity: 0.88; transform: translateY(-2px); }
+.cta-btn-primary:active { transform: translateY(0); }
+.cta-btn-primary.large  { padding: 14px 32px; font-size: 15px; }
+
+.cta-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.cta-btn-secondary:hover {
+    border-color: var(--teal-light);
+    color: var(--teal-light);
+}
+
+/* ─── CTA FINALE ─────────────────────────────────────── */
+.about-cta-final {
+    position: relative;
+    padding: 100px 40px;
+    text-align: center;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+}
+
+.about-cta-final-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-cta-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text-primary);
+}
+
+.about-cta-title .brand {
+    font-family: 'Cherry Bomb One', cursive;
+    background: var(--gradient);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-cta-sub {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Lueurs d'ambiance de la page à propos */
+.glow-orb-about-1 {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(14,139,150,0.15) 0%, transparent 70%);
+    top: -150px; left: -100px;
+}
+.glow-orb-about-2 {
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(212,34,204,0.1) 0%, transparent 70%);
+    bottom: -50px; right: -100px;
+}
+
+/* ─── STORY SECTION (GRID INTERACTIF) ────────────────── */
+.about-story {
+    padding: 60px 80px 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 64px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.about-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.about-section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.about-section-title.central {
+    font-family: 'Cherry Bomb One', cursive;
+    background: var(--gradient);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-p {
+    font-size: 15px;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+.text-p strong { color: var(--text-primary); font-weight: 500; }
+
+/* ─── CLAVIER CYBERPUNK INTERACTIF ───────────────────── */
+.keyboard-display {
+    background: #0b0e17;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 440px;
+    margin: 0 auto;
+    position: relative;
+    animation: floatAbout 6s ease-in-out infinite;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.keyboard-display:hover {
+    border-color: rgba(14,139,150,0.5);
+    box-shadow: var(--shadow-teal), 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Style de base des touches */
+.key {
+    background: #131824;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 3px solid #080a10;
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+/* Touches spéciales */
+.spacebar {
+    width: 240px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+.btn-hit {
+    background: rgba(212,34,204,0.1);
+    border-color: rgba(212,34,204,0.3);
+    color: rgba(212,34,204,1);
+}
+
+/* Vagues de lumière au survol du clavier complet */
+.keyboard-display:hover .key {
+    color: var(--text-primary);
+    border-color: rgba(14,139,150,0.3);
+    animation: keyGlow 1.5s infinite alternate;
+}
+
+/* Décalages pour l'effet de vague */
+.keyboard-display:hover .neon-1 { animation-delay: 0s; }
+.keyboard-display:hover .neon-2 { animation-delay: 0.2s; }
+.keyboard-display:hover .neon-3 { animation-delay: 0.4s; }
+.keyboard-display:hover .neon-4 { animation-delay: 0.6s; }
+.keyboard-display:hover .spacebar { animation-delay: 0.8s; }
+
+.keyboard-display:hover .btn-hit {
+    animation: hitGlow 1s infinite alternate;
+}
+
+/* Keyframes des lueurs néon */
+@keyframes keyGlow {
+    0% {
+        background: #131824;
+        box-shadow: none;
+    }
+    100% {
+        background: rgba(14,139,150,0.15);
+        border-color: var(--teal-light);
+        box-shadow: 0 0 12px rgba(14,139,150,0.4);
+    }
+}
+
+@keyframes hitGlow {
+    0% {
+        background: rgba(212,34,204,0.1);
+        box-shadow: none;
+    }
+    100% {
+        background: rgba(212,34,204,0.25);
+        border-color: rgba(212,34,204,1);
+        box-shadow: 0 0 15px rgba(212,34,204,0.5);
+        transform: scale(0.98);
+    }
+}
+
+/* Animation de flottement fluide */
+@keyframes floatAbout {
+    0%, 100% { transform: translateY(0px) rotate(0.5deg); }
+    50% { transform: translateY(-12px) rotate(-0.5deg); }
+}
+
+/* ─── TECH SECTION (CARDS INFOS) ─────────────────────── */
+.about-tech {
+    padding: 100px 80px;
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border);
+    position: relative;
+}
+
+.tech-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 48px auto 0;
+}
+
+.tech-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+}
+
+.tech-card:hover {
+    border-color: var(--border-glow);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-teal);
+}
+
+.tech-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-sm);
+    background: rgba(14,139,150,0.08);
+    border: 1px solid rgba(14,139,150,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--teal-light);
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.tech-card:hover .tech-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: var(--gradient);
+    color: #fff;
+    border-color: transparent;
+}
+
+.tech-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.tech-card p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* ─── RESPONSIVE DESIGN ───────────────────────────────── */
+@media (max-width: 1024px) {
+    .about-story, .about-tech { padding: 60px 40px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .tech-cards-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+    .about-hero { padding: 100px 24px 60px; }
+    .about-story, .about-tech { padding: 40px 24px; }
+    .tech-cards-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+    .about-hero-cta { flex-direction: column; width: 100%; }
+    .cta-btn-primary, .cta-btn-secondary { width: 100%; justify-content: center; }
+    .about-cta-final { padding: 60px 24px; }
+}

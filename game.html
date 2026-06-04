@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="stylesheet" href="assets/css/import.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>KEY BREAKER — Play</title>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <!-- <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="assets/images/Logo.png" alt="Logo">
+            <h1>KEY BREAKER</h1>
+        </div>
+
+        <div class="sidebar-mode">
+            <label for="mode">Difficulté</label>
+            <select id="mode">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="sidebar-nav-label">Navigation</div>
+            <a href="index.html" class="nav-item">
+                <img src="assets/images/icone_maison.svg" alt="">
+                <span id="acceuil">Accueil</span>
+            </a>
+            <a href="" class="nav-item active">
+                <i class="fa-solid fa-keyboard"></i>
+                <span>Jouer</span>
+            </a>
+            <a href="" class="nav-item propos">
+                <i class="fa-solid fa-user-group"></i>
+                <span id="propos">À propos</span>
+            </a>
+            <a href="" class="nav-item parametres">
+                <i class="fa-solid fa-gear"></i>
+                <span id="parametres">Paramètres</span>
+            </a>
+        </nav>
+    </aside> -->
+
+    <!-- MAIN -->
+    <div class="main-content">
+
+        <!-- TOP BAR -->
+        <!-- TOP BAR -->
+<!-- TOP BAR -->
+<div class="topbar">
+    <div class="mode-pills">
+        <span class="mode-label">Mode :</span>
+        <div class="pill active-easy" id="easy-pill">
+            <div class="dot dot-green"></div> Easy
+        </div>
+        <div class="pill" id="medium-pill">
+            <div class="dot dot-yellow"></div> Medium
+        </div>
+        <div class="pill" id="hard-pill">
+            <div class="dot dot-red"></div> Hard
+        </div>
+    </div>
+
+    <a href="index.html" class="btn-home">
+        <i class="fa-solid fa-house"></i>
+        Accueil
+    </a>
+</div>
+
+        <!-- SCROLL AREA -->
+        <div class="scroll-area">
+
+            <!-- MAIN PANEL -->
+            <div class="panel">
+                <div class="panel-header">
+                    <span class="panel-title">Statistiques en direct</span>
+                    <div class="panel-controls">
+                        <select class="ctrl-select" id="language">
+                            <!-- <option value="Francais">Français</option> -->
+                            <option value="English">English</option>
+                        </select>
+                        <select class="ctrl-select" id="Time">
+                            <option value="30">30 sec</option>
+                            <option value="60">60 sec</option>
+                        </select>
+                        <button class="btn-restart">
+                            <i class="fa-solid fa-arrow-rotate-left" id="restart"></i>
+                            Restart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STATS ROW -->
+                <div class="stats-grid">
+                    <div class="stat-cell wpm-cell" id="wpm">
+                        <div class="stat-label">WPM Actuel</div>
+                        <span class="stat-value wpm-val wpm">—</span>
+                    </div>
+                    <div class="stat-cell acc-cell" id="accuracy">
+                        <div class="stat-label">Précision</div>
+                        <span class="stat-value acc-val accuracy">—</span>
+                    </div>
+                    <div class="stat-cell words-cell" id="typed">
+                        <div class="stat-label">Mots tapés</div>
+                        <p class="stat-value words-val typed">0</p>
+                    </div>
+                    <div class="stat-cell time-cell" id="time">
+                        <div class="stat-label">Temps</div>
+                        <p class="stat-value time-val time">0<span class="stat-unit">s</span></p>
+                    </div>
+                </div>
+
+                <!-- WORD DISPLAY -->
+                <div class="word-area">
+                    <p id="word-display"></p>
+                </div>
+
+                <!-- INPUT -->
+                <div class="input-wrap">
+                    <input type="text" id="input-field" placeholder="Commencez à taper ici…" autofocus>
+                </div>
+            </div>
+
+            <!-- RESULTS PANEL -->
+            <div class="panel">
+                <div class="results-panel">
+                    <div class="resultConatiner">
+                        <div class="results-title">Résultats de la partie</div>
+                        <div class="chart-wrapper">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end scroll-area -->
+    </div><!-- end main-content -->
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+/* ─── BASE DE LA PAGE RÉSEAUX ───────────────────────── */
+.networks-page main {
+    padding-top: 68px;
+    background: #07090f;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.networks-page .header-nav a.active {
+    color: var(--text-primary) !important;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ─── CONTENEUR HERO DE LA GRILLE ────────────────────── */
+.networks-hero {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    padding: 80px 24px;
+    z-index: 2;
+}
+
+.networks-header {
+    text-align: center;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.net-badge {
+    background: rgba(14, 139, 150, 0.1);
+    border: 1px solid rgba(14, 139, 150, 0.2);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--teal-light);
+}
+
+.networks-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.networks-title .brand {
+    font-family: 'Cherry Bomb One', cursive;
+    background: var(--gradient);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(212,34,204,0.3));
+}
+
+.networks-subtitle {
+    font-size: 15px;
+    color: var(--text-secondary);
+    max-width: 500px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/* Orbes d'ambiance */
+.glow-net-1 {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(14,139,150,0.12) 0%, transparent 70%);
+    top: -100px; right: -150px;
+}
+.glow-net-2 {
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(212,34,204,0.08) 0%, transparent 70%);
+    bottom: -150px; left: -150px;
+}
+
+/* ─── LES CARTES DE RÉSEAUX ─────────────────────────── */
+.networks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.net-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+/* Contenu textuel interne */
+.net-info h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+    transition: color 0.3s;
+}
+
+.net-info p {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Icônes de gauche */
+.net-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+    transition: all 0.3s;
+}
+
+/* Flèche externe en haut à droite */
+.net-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+    opacity: 0.4;
+    transition: transform 0.3s, opacity 0.3s, color 0.3s;
+}
+
+/* ─── HOVERS INDIVIDUELS STYLE NEON ───────────────────── */
+.net-card:hover {
+    transform: translateY(-4px);
+    border-color: currentColor; /* Utilise la couleur définie dans les sous-classes */
+}
+
+.net-card:hover .net-arrow {
+    opacity: 1;
+    transform: translate(2px, -2px);
+    color: var(--text-primary);
+}
+
+/* Personnalisation par marque */
+.card-discord { color: #5865F2; }
+.card-discord:hover { box-shadow: 0 0 25px rgba(88, 101, 242, 0.3); }
+.card-discord .net-icon { color: #5865F2; }
+.card-discord:hover .net-icon { background: #5865F2; color: #fff; }
+
+.card-github { color: #f0f6fc; }
+.card-github:hover { box-shadow: 0 0 25px rgba(255, 255, 255, 0.15); }
+.card-github .net-icon { color: #fff; }
+.card-github:hover .net-icon { background: #fff; color: #000; border-color: #fff; }
+
+.card-x { color: #2ea4ff; } /* Couleur d'accentuation électrique */
+.card-x:hover { box-shadow: 0 0 25px rgba(46, 164, 255, 0.25); }
+.card-x .net-icon { color: #fff; }
+.card-x:hover .net-icon { background: #fff; color: #000; border-color: #fff; }
+
+.card-instagram { color: #d422cc; } /* Reprend ton violet var(--gradient) */
+.card-instagram:hover { box-shadow: 0 0 25px rgba(212, 34, 204, 0.3); }
+.card-instagram .net-icon { color: #d422cc; }
+.card-instagram:hover .net-icon { background: var(--gradient); color: #fff; border-color: transparent; }
+
+/* ─── RESPONSIVE DESIGN ───────────────────────────────── */
+@media (max-width: 768px) {
+    .networks-grid {
+        grid-template-columns: 1fr;
+    }
+    .networks-hero {
+        padding: 40px 16px;
+    }
+    .net-card {
+        padding: 20px;
+    }
+}

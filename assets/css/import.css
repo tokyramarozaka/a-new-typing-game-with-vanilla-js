@@ -1,0 +1,38 @@
+        :root {
+            --teal:        #0E8B96;
+            --teal-light:  #14B8C6;
+            --teal-dark:   #0A6870;
+            --violet:      #4F5B8A;
+            --violet-light:#6B7ABF;
+            --magenta:     #D422CC;
+            --magenta-glow:#F12BE6;
+            --bg-base:     #07090F;
+            --bg-surface:  #0D1018;
+            --bg-card:     #111521;
+            --bg-card-hover:#161C2E;
+            --border:      rgba(255,255,255,0.07);
+            --border-glow: rgba(20,184,198,0.25);
+            --text-primary:#F0F4FF;
+            --text-secondary:#8A92B2;
+            --text-muted:  #4A5270;
+            --radius-sm:   8px;
+            --radius-md:   14px;
+            --radius-lg:   22px;
+            --radius-xl:   32px;
+            --shadow-teal: 0 0 40px rgba(14,139,150,0.2);
+            --shadow-mag:  0 0 40px rgba(212,34,204,0.15);
+            --gradient:    linear-gradient(135deg, var(--teal) 0%, var(--violet) 50%, var(--magenta) 100%);
+            --gradient-subtle: linear-gradient(135deg, rgba(14,139,150,0.12) 0%, rgba(79,91,138,0.08) 50%, rgba(212,34,204,0.12) 100%);
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg-base);
+            color: var(--text-primary);
+            font-family: 'DM Sans', sans-serif;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }

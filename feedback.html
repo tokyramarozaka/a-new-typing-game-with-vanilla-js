@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/images/Logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/import.css">
+    <link rel="stylesheet" href="assets/css/feedback.css">
+    <title>Feedback — KEY BREAKER</title>
+</head>
+<body class="feedback-page">
+
+    <header>
+        <div class="logo">
+            <div class="header_logo"></div>
+            <h1>KEY BREAKER</h1>
+        </div>
+
+        <nav class="header-nav">
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="feedback.html" class="active">Feedback</a>
+            <a href="reseaux.html">Réseaux</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="feedback-container">
+            <div class="glow-orb glow-feedback-1"></div>
+            <div class="glow-orb glow-feedback-2"></div>
+
+            <div class="feedback-card">
+                <div class="feedback-header">
+                    <h1 class="feedback-title">Rapport de <span class="brand">Session</span></h1>
+                    <p class="feedback-subtitle">Un bug ? Une suggestion ? Laisse ton empreinte pour améliorer la matrice.</p>
+                </div>
+
+                <form action="#" method="POST" class="feedback-form">
+                    
+                    <div class="form-group">
+                        <label for="username"><i class="fa-solid fa-terminal"></i> Pseudo / Identifiant</label>
+                        <input type="text" id="username" name="username" placeholder="Ex: Noem_974" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="feedback-type"><i class="fa-solid fa-layer-group"></i> Catégorie du feedback</label>
+                        <div class="select-wrapper">
+                            <select id="feedback-type" name="feedback-type" required>
+                                <option value="" disabled selected hidden>Choisir une catégorie...</option>
+                                <option value="bug">Rapport de Bug 🐛</option>
+                                <option value="suggestion">Suggestion d'amélioration 💡</option>
+                                <option value="design">Design / Interface 🎨</option>
+                                <option value="autre">Autre transmission ⚡</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-star-half-stroke"></i> Évaluation du système</label>
+                        <div class="cyber-rating">
+                            <input type="radio" name="rate" id="rate-5" value="5"><label for="rate-5" class="fa-solid fa-bolt" title="Excellent"></label>
+                            <input type="radio" name="rate" id="rate-4" value="4"><label for="rate-4" class="fa-solid fa-bolt" title="Très bon"></label>
+                            <input type="radio" name="rate" id="rate-3" value="3"><label for="rate-3" class="fa-solid fa-bolt" title="Moyen"></label>
+                            <input type="radio" name="rate" id="rate-2" value="2"><label for="rate-2" class="fa-solid fa-bolt" title="Instable"></label>
+                            <input type="radio" name="rate" id="rate-1" value="1"><label for="rate-1" class="fa-solid fa-bolt" title="Critique"></label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message"><i class="fa-solid fa-code"></i> Corps du message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Décris ton expérience ou ton problème en détail..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Transmettre les données</span>
+                        <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                    </button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-upper">
+            <div class="footer-brand footer-col">
+                <div class="footer-logo">
+                    <img src="assets/images/Logo.png" alt="KEY BREAKER Logo">
+                    <h2>KEY BREAKER</h2>
+                </div>
+                <p class="footer-tagline">Dominez le clavier. Améliorez votre vitesse et votre précision, session après session.</p>
+                <div class="social-row">
+                    <a href="" class="social-btn" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" class="social-btn" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Liens</h3>
+                <a href="index.html">Accueil</a>
+                <a href="about.html">À propos</a>
+                <a href="feedback.html">Feedback</a>
+                <!-- <a href="">Blog</a>
+                <a href="">FAQ</a> -->
+            </div>
+
+            <div class="footer-col">
+                <h3>Community</h3>
+                <a href="https://discord.gg/keybreaker">Serveur Discord</a>
+                <!-- <a href="">Forum</a>
+                <a href="">Contribuer</a> -->
+            </div>
+
+            <div class="footer-col">
+                <h3>Jeu</h3>
+                <a href="game.html">Jouer</a>
+                <!-- <a href="">Classements</a>
+                <a href="">Paramètres</a> -->
+            </div>
+        </div>
+
+        <div class="footer-lower">
+            <p>© 2026 KEY BREAKER. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

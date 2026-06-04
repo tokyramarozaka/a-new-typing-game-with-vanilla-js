@@ -1,30 +1,219 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Test</title>
-</head>
-
-<body>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/Logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/import.css" />
+    <title>KEY BREAKER — Typing Test</title>
+  </head>
+  <body>
+    <!-- HEADER -->
     <header>
-        <h1>Typing Test</h1>
-        <label for="mode">Select Mode:</label>
-        <select id="mode">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
+      <div class="logo">
+        <div class="header_logo"></div>
+        <h1>KEY BREAKER</h1>
+      </div>
+
+      <nav class="header-nav">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À propos</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="reseaux.html">Réseaux</a>
+      </nav>
+
+      <!-- <div class="header-right">
+            <div class="mode-select-wrap">
+                <label for="mode">Mode</label>
+                <select id="mode">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </div> -->
     </header>
 
     <main>
-        <p id="word-display"></p>
-        <input type="text" id="input-field" autofocus>
-        <p id="results">Results : </p>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="hero-grid-bg"></div>
+
+        <div class="hero-left">
+          <div class="hero-badge">
+            <span>Typing Challenge</span>
+          </div>
+
+          <h2 class="hero-title">
+            Brisez vos limites.<br />
+            <span class="brand">KEY BREAKER</span>
+          </h2>
+
+          <p class="hero-sub">
+            Fais danser tes doigts sur le clavier. Garde le rythme, aligne les
+            mots sans faire de faute et explose le compteur de score.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="game.html" class="btn-primary">
+              <i class="fa-solid fa-bolt"></i>
+              Jouer maintenant
+            </a>
+            <a href="savoirplus.html" class="btn-ghost">
+              <i class="fa-solid fa-circle-info"></i>
+              En savoir plus
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>120+</strong>
+              <span>WPM max</span>
+            </div>
+            <div class="hero-stat">
+              <strong>3</strong>
+              <span>Modes</span>
+            </div>
+            <div class="hero-stat">
+              <strong>100%</strong>
+              <span>Précision</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-img-wrapper">
+            <img src="assets/images/keyboard.png" alt="Keyboard illustration" />
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES / RULES -->
+      <section class="features">
+        <div class="section-header">
+          <div class="section-eyebrow">Pourquoi jouer</div>
+          <h1 class="section-title">Les enjeux</h1>
+        </div>
+
+        <div class="cards-grid">
+          <div class="feature-card">
+            <span class="card-number">01</span>
+            <div class="card-icon">
+              <img src="assets/images/stopwatch.png" alt="Rapidité" />
+            </div>
+            <h2>Observez votre rapidité</h2>
+            <p>
+              Testez la vitesse de vos doigts et découvrez votre véritable score
+              de mots par minute !
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <span class="card-number">02</span>
+            <div class="card-icon">
+              <img src="assets/images/brokenStopwatch.png" alt="Record" />
+            </div>
+            <h2>Détruisez votre record</h2>
+            <p>
+              Entrez dans la zone, alignez les mots avec une précision
+              chirurgicale et détruisez votre record à chaque session.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <span class="card-number">03</span>
+            <div class="card-icon">
+              <div class="card-icon-bg">
+                <img src="assets/images/stats.png" alt="Stats" />
+              </div>
+            </div>
+            <h2>Analysez votre performance</h2>
+            <p>
+              Pas de place pour le hasard. Analysez votre vitesse brute, votre
+              régularité et devenez une machine à taper.
+            </p>
+          </div>
+        </div>
+
+        <div class="features-cta">
+          <p class="features-cta-text">
+            Prêt à découvrir ce que tes doigts ont dans le ventre ?
+          </p>
+          <a href="game.html" class="features-cta-btn">
+            <i class="fa-solid fa-keyboard"></i>
+            Lancer le test
+          </a>
+        </div>
+      </section>
     </main>
 
-    <script src="script.js"></script>
-</body>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-upper">
+        <div class="footer-brand footer-col">
+          <div class="footer-logo">
+            <img src="assets/images/Logo.png" alt="KEY BREAKER Logo" />
+            <h2>KEY BREAKER</h2>
+          </div>
+          <p class="footer-tagline">
+            Dominez le clavier. Améliorez votre vitesse et votre précision,
+            session après session.
+          </p>
+          <div class="social-row">
+            <a href="" class="social-btn" aria-label="Discord"
+              ><i class="fa-brands fa-discord"></i
+            ></a>
+            <a href="" class="social-btn" aria-label="Facebook"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="" class="social-btn" aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="" class="social-btn" aria-label="Twitter/X"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
 
+        <div class="footer-col">
+          <h3>Liens</h3>
+          <a href="index.html">Accueil</a>
+          <a href="about.html">À propos</a>
+          <a href="feedback.html">Feedback</a>
+        </div>
+
+        <div class="footer-col">
+          <h3>Community</h3>
+          <a href="https://discord.gg/keybreaker">Serveur Discord</a>
+          <!-- <a href="">Forum</a>
+                <a href="">Contribuer</a> -->
+        </div>
+
+        <div class="footer-col">
+          <h3>Jeu</h3>
+          <a href="game.html">Jouer</a>
+          <!-- <a href="">Classements</a>
+                <a href="">Paramètres</a> -->
+        </div>
+      </div>
+
+      <div class="footer-lower">
+        <p>© 2026 KEY BREAKER. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

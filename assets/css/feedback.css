@@ -1,0 +1,231 @@
+/* ─── BASE DE LA PAGE FEEDBACK ───────────────────────── */
+.feedback-page main {
+    padding-top: 68px;
+    background: #07090f;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-page .header-nav a.active {
+    color: var(--text-primary) !important;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ─── CONTENEUR ET AMBIANCE ──────────────────────────── */
+.feedback-container {
+    position: relative;
+    width: 100%;
+    padding: 60px 24px;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* Orbes de lueur d'ambiance */
+.glow-feedback-1 {
+    width: 450px; height: 450px;
+    background: radial-gradient(circle, rgba(212,34,204,0.12) 0%, transparent 70%);
+    top: -100px; left: 10%;
+}
+.glow-feedback-2 {
+    width: 450px; height: 450px;
+    background: radial-gradient(circle, rgba(14,139,150,0.12) 0%, transparent 70%);
+    bottom: -100px; right: 10%;
+}
+
+/* ─── LA CARTE DU FORMULAIRE ─────────────────────────── */
+.feedback-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 5;
+}
+
+.feedback-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.feedback-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.feedback-title .brand {
+    font-family: 'Cherry Bomb One', cursive;
+    background: var(--gradient);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(212,34,204,0.3));
+}
+
+.feedback-subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* ─── ÉLÉMENTS DE FORMULAIRE ─────────────────────────── */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.form-group label i {
+    color: var(--teal-light);
+    margin-right: 6px;
+    font-size: 12px;
+}
+
+/* Champs Inputs, Select, Textarea */
+.feedback-form input[type="text"],
+.feedback-form select,
+.feedback-form textarea {
+    background: #0b0e17;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+    border-color: rgba(14,139,150,0.6);
+    box-shadow: 0 0 10px rgba(14,139,150,0.2);
+}
+
+.feedback-form textarea {
+    resize: vertical;
+}
+
+/* Flèche personnalisée pour le select */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+.select-wrapper::after {
+    content: '\f107';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    font-size: 14px;
+}
+.feedback-form select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* ─── SYSTEME DE RATING CYBER (ECLAIRS) ──────────────── */
+.cyber-rating {
+    display: flex;
+    flex-direction: row-reverse; /* Permet le hover en cascade inverse */
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.cyber-rating input {
+    display: none;
+}
+
+.cyber-rating label {
+    font-size: 24px;
+    color: #1a2333;
+    cursor: pointer;
+    transition: color 0.2s, filter 0.2s;
+    margin: 0;
+}
+
+/* Effets d'illumination au survol et à la sélection */
+.cyber-rating label:hover,
+.cyber-rating label:hover ~ label,
+.cyber-rating input:checked ~ label {
+    color: #ffbd2e;
+    filter: drop-shadow(0 0 8px rgba(255, 189, 46, 0.6));
+}
+
+/* ─── BOUTON D'ENVOI NÉON ────────────────────────────── */
+.submit-btn {
+    background: var(--gradient);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+    transition: transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(212,34,204,0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(212,34,204,0.5), 0 0 10px rgba(14,139,150,0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+.btn-icon {
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover .btn-icon {
+    transform: translateX(4px) scale(1.1);
+}
+
+/* ─── RESPONSIVE DESIGN ───────────────────────────────── */
+@media (max-width: 768px) {
+    .feedback-card {
+        padding: 30px 20px;
+    }
+    .feedback-container {
+        padding: 40px 16px;
+    }
+}
