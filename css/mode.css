@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #0a0f1e;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.btnn {
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00e5ff, #ff6b6b);
+  color: #0a0f1e;
+  font-weight: bold;
+}

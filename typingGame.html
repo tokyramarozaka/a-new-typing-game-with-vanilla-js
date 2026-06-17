@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Game</title>
+  <link rel="stylesheet" href="css/typingGame.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body data-theme="dark">
+
+  <div class="menu hidden" id="menu">
+    <h1>Typing Game</h1>
+    <button class="btnn" id="beginBtn">Start Game</button>
+    <button class="btnn" id="modeBtn">Choose mode</button>
+  </div>
+
+  <header class="topbar">
+    <h1>Typing Game</h1>
+    <div class="top-actions">
+      <button id="startBtn" type="button" class="btn-action">Commencer</button>
+      <button id="pauseBtn" type="button" class="btn-action" disabled>Pause</button>
+      <button id="themeBtn" type="button" class="btn-action">Thème</button>
+      <a class="btn-action btn-link" href="typingGameStats.html">Voir les stats</a>
+      <a class="btn-action btn-link" href="mode.html">Mode</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+
+      <div class="controls">
+        <label>
+          Mode
+          <select id="modeSel">
+            <option value="Facile">Facile</option>
+            <option value="Moyen">Moyen</option>
+            <option value="Difficile">Difficile</option>
+          </select>
+        </label>
+        <label>
+          Temps
+          <select id="timeSel">
+            <option value="60" selected>60 s</option>
+            <option value="90">90 s</option>
+            <option value="120">120 s</option>
+          </select>
+        </label>
+      </div>
+
+      <p class="timer">Temps restant : <strong id="timeLeft">60</strong>s</p>
+
+      <div class="word-line-wrapper">
+        <p id="wordLine" class="word-line"></p>
+      </div>
+
+      <input
+        id="typeInp"
+        type="text"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Tape ici..."
+        disabled
+        >
+        
+        <div class="stats-grid">
+          <div class="stat"><span>WPM</span><strong id="wpmVal">0</strong></div>
+          <div class="stat"><span>Précision</span><p id="accVal">0%</p></div>
+          <div class="stat"><span>Score</span><strong id="scoreVal">0</strong></div>
+          <div class="stat"><span>Erreurs</span><strong id="errVal">0</strong></div>
+        </div>
+    
+        <p id="msg">Appuie sur Commencer pour lancer la partie.</p>
+        <p id="bestMsg">Meilleur score : 0 WPM</p>
+      </section>
+    </main>
+    
+    <script src="js/typingGame.js"></script>
+    </body>
+    </html>

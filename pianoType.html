@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PianoType</title>
+  <link rel="stylesheet" href="css/pianoType.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="jeu">
+    <h1>PianoType</h1>
+
+    <div class="top-actions">
+      <a class="btn-action" href="mode.html">Mode</a>
+      <button id="btn-theme" class="btn-theme">🌙</button>
+    </div>
+
+    <div id="modePianoBar">
+      <label>
+        Mode
+        <select id="pianoModeSel">
+          <option value="normal">Normal</option>
+          <option value="fast">Rapide</option>
+          <option value="zen">Zen</option>
+          <option value="arcade">Arcade</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="scorebar">
+      <div class="stat"><span class="label">Score</span><span class="valeur" id="score">0</span></div>
+      <div class="stat"><span class="label">Meilleur</span><span class="valeur" id="meilleur">0</span></div>
+      <div class="stat"><span class="label">Vitesse</span><span class="valeur" id="vitesse">1x</span></div>
+    </div>
+
+    <div id="zone">
+      <canvas id="canvas"></canvas>
+
+      <div id="ecran">
+        <h2 id="ecran-titre">PianoType</h2>
+        <p id="ecran-msg">Des mots tombent — tape-les avant qu'ils atteignent le bas !</p>
+        <button id="btn-jouer">Jouer</button>
+      </div>
+
+      <div id="ecran-stats">
+        <h2>Partie terminée</h2>
+        <p id="resume-stats" class="resume-stats"></p>
+        <div id="stats-grille">
+          <div class="stat-case"><span class="stat-val" id="stat-score">0</span><span class="stat-nom">Score</span></div>
+          <div class="stat-case"><span class="stat-val" id="stat-mots">0</span><span class="stat-nom">Mots détruits</span></div>
+          <div class="stat-case"><span class="stat-val" id="stat-lettres">0</span><span class="stat-nom">Lettres tapées</span></div>
+          <div class="stat-case"><span class="stat-val" id="stat-precision">0%</span><span class="stat-nom">Précision</span></div>
+          <div class="stat-case"><span class="stat-val" id="stat-wpm">0</span><span class="stat-nom">Mots/min</span></div>
+          <div class="stat-case"><span class="stat-val" id="stat-niveau">1</span><span class="stat-nom">Niveau atteint</span></div>
+        </div>
+        <div id="barre-precision"><div id="barre-remplie"></div></div>
+        <button id="btn-rejouer">Rejouer</button>
+      </div>
+    </div>
+
+    <div id="zone-frappe">
+      <input id="champ" type="text" placeholder="tape le mot…" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+    </div>
+
+    <p id="astuce">Tape le mot sur la tuile pour le détruire !</p>
+  </div>
+
+
+  <script src="js/pianoType.js"></script>
+</body>
+</html>
