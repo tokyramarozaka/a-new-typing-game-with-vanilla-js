@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistiques</title>
+  <link rel="stylesheet" href="css/typingGame.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Statistiques</h1>
+    <nav class="nav">
+      <a href="typingGame.html" class="btn-action">Retour dans le Jeu</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="stats-header">
+        <h2>Historique des parties</h2>
+     
+      </div>
+
+      <div class="controls">
+        <button id="clearStatsBtn" type="button">Effacer les stats</button>
+      </div>
+
+      <div id="historyCards" class="stats-grid"></div>
+
+      <div class="chart-wrap">
+        <canvas id="statsCanvas"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/typingGameStats.js"></script>
+</body>
+</html>
